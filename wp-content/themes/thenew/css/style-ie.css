@@ -1,0 +1,21 @@
+/* Begin exotics fonts */
+/*IE*/
+@font-face {font-family: 'Chunk'; src: url('fonts/Chunkfive.eot');}
+
+/* -------------------- Comments Bubble Icons ----------------------------- */
+article > header > p:first-child {
+    display: block;
+    width: 30px;
+    height: 30px;
+    /*background: url('images/comments.png') no-repeat;*/
+}
+article > header > p:first-child span > strong,
+article > header > p:first-child a,
+article > header > p:first-child a:hover {padding: 0; border: medium none; background: none;}
+article > header > p:first-child a:hover {color: #111;}
+article > header > p:first-child span,
+article > header > p:first-child:hover span {top: 0; left: 0; z-index: 0; border: medium none;}
+/* ----------------------------------------------------------------------------------- */
+article > header time {
+	color: grey;
+}

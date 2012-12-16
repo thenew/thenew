@@ -1,0 +1,14 @@
+body {
+	background: url(fond.jpg) repeat;
+	background-color: #111111;
+	}
+#principal {
+	width: 1000px;
+	height: 700px;
+	margin: auto;
+	padding-top: 5px;
+}
+a {
+	color: white;
+	text-decoration: none;
+	}
