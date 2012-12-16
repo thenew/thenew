@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/*
+Name: Normalize
+URL: http://github.com/Darklg/CSSNormalize
+Version: 1.4
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+   Règlages de base
+   ------------------------------------------------------- */
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+.lt_ie7 body {
+    height: 100%;
+}
+
+/* Prevents sub and sup affecting line-height in all browsers | gist.github.com/413930 */
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+
+/* bicubic resizing for non-native sized IMG | code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.lt_ie8 img { -ms-interpolation-mode: bicubic; }
+/* Aligne les images inline sur le texte */
+img,input[type=image]{vertical-align:bottom;}
+/* Curseur adéquat pour les boutons */
+input[type="submit"],input[type="image"],button{cursor:pointer;}
+
+/* ----------------------------------------------------------
+   Typo
+   ------------------------------------------------------- */
+
+body {
+    font: 62.5%/1 sans-serif;
+    color: #212121;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+    font-weight: bold;
+    display: block;
+}
+
+h1, .h1 {
+    font-size: 25px;
+    line-height: 40px;
+}
+
+h2, .h2 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h3, .h3 {
+    margin: 5px 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+h4, .h4 {
+    margin: 5px 0;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+h1:first-child, .h1:first-child,
+h2:first-child, .h2:first-child,
+h3:first-child, .h3:first-child,
+h4:first-child, .h4:first-child,
+h5:first-child, .h5:first-child {
+    margin-top: 0;
+}
+
+p,
+li {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* ----------------------------------------------------------
+   Structure
+   ------------------------------------------------------- */
+
+.le-content ul,
+p {
+    margin-bottom: 12px;
+}
+
+.le-content ul ul {
+    margin-bottom: 0;
+    padding-left: 12px;
+}
+
+.le-content ul:last-child,
+p:last-child {
+    margin-bottom: 0;
+}
+
+.le-content li {
+    list-style: inside disc;
+}
+
+table {
+    width: 100%;
+}
+
+/* ----------------------------------------------------------
+   Liens
+   ------------------------------------------------------- */
+
+a {
+    color: #69C;
+}
+
+/* l'ajout d'un id permet de ne pas avoir à re-styliser :hover si on change la couleur plus tard */
+a:hover,
+#main-container a:hover {
+    color: #C96;
+}
+
+.aimginv {
+    opacity: 0.70;
+    filter: alpha(opacity=70);
+}
+
+/* L'opacité à .99 permet d'éviter un effet disgracieux sur chrome */
+.aimginv:hover,
+.aimg {
+    opacity: 0.99;
+    filter: alpha(opacity=99);
+}
+
+.aimg:hover,
+a:hover img {
+    opacity: 0.80;
+    filter: alpha(opacity=80);
+}
+
+/* ----------------------------------------------------------
+   Transitions
+   ------------------------------------------------------- */
+
+.trans-color,
+a {
+    -webkit-transition: color .2s, background-color .2s, border-color .2s;
+    -moz-transition: color .2s, background-color .2s, border-color .2s;
+    -ms-transition: color .2s, background-color .2s, border-color .2s;
+    -o-transition: color .2s, background-color .2s, border-color .2s;
+    transition: color .2s, background-color .2s, border-color .2s;
+}
+
+.aimg,
+.aimginv,
+.trans-opacity,
+a img {
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -ms-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.trans-all {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
