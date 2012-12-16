@@ -8,6 +8,7 @@
   <meta name="Thenew" content="thenew.fr, le site de Rémy Barthez" />
   <meta name="keywords" content="remy barthez, rémy barthez, rémy, barthez, ry barthez, ry, ry.barthez, remi barthez, rémi barthez, rémi, bartez, barthes, bartes, ry.barthez.free.fr, xenon-360, xenon360, thenew.fr, thenew, the new, twitter.com/rybarthez, remybarthez.fr, remy.barthez.fr, remybarthez.com, developer web, captain ravage, ico, mig" />
   <meta name="author" content="Rémy Barthez" />
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/z-all.css" type="text/css" media="screen" />
   <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -26,9 +27,10 @@
 <!--[if IE 9 ]><body <?php body_class('is_ie9 lt_ie10'); ?>><![endif]-->
 <!--[if gt IE 9 ]><body <?php body_class('is_ie10 gt_ie9'); ?>><![endif]-->
 <!--[if !IE]><!--><body <?php body_class(); ?> ><!--<![endif]-->
-<header class="header v-wrapper">
-  <a class="thenew-logo" href="<?php bloginfo('home'); ?>">
-    <div class="t demi"></div>
-    <div class="n demi"></div>
-  </a>
-</header>
+  <header class="header v-wrapper">
+    <a class="thenew-logo" href="<?php site_url('/'); ?>">
+      <div class="t demi"></div>
+      <div class="n demi"></div>
+    </a>
+  </header>
+  <div class="wrapper">
