@@ -14,6 +14,4 @@ if($baseline_query->have_posts()): ?>
   </div>
 <?php endif;
 wp_reset_postdata();
-?>
-
-<?php get_footer(); ?>
+get_footer(); ?>

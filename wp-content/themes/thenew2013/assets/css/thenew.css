@@ -1,15 +1,28 @@
 @charset "UTF-8";
 
+html {
+}
+
 body {
-  font-family: 'Georgia',serif;
-  color: #eee;
-  background-color: #222;
+    font-family: 'Georgia',serif;
+    background-color: #ddd;
+}
+
+.main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #222;
+    background-color: #efefef;
 }
 
 .v-wrapper {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* ----------------------------------------------------------
@@ -17,24 +30,82 @@ body {
  ------------------------------------------------------- */
 
 .header {
-  display: table;
-  z-index: 10;
-  position: relative;
-  width: 100%;
-  height: 250px;
-  margin-bottom: 40px;
-  padding: 10px;
+    display: table;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.header .thenew-logo {
+    width: 200px;
+    height: 200px;
 }
 
 .home .baseline {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  font-style: italic;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: bold;
+}
+
+.home .baseline p {
+    font-size: 34px;
+    opacity: .9999;
 }
 
 .container {
-  display: table;
-  width: 100%;
-  height: 100%;
-  padding-top: 300px;
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding-top: 300px;
+}
+
+/* ----------------------------------------------------------
+   Layout
+   ------------------------------------------------------- */
+
+.wrapper {
+    display: table;
+    width: 100%;
+    vertical-align: top;
+}
+
+.sidenav {
+    display: table-cell;
+    width: 140px;
+    padding: 0 20px 0 0;
+    text-align: right;
+}
+
+.sidenav .thenew-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.sidenav .menu {
+    padding-top: 20px;
+}
+
+.sidenav .menu a {
+    text-transform: uppercase;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #7258a1;
+}
+
+.main-col {
+    display: table-cell;
+    width: 800px;
+}
+
+.post-list {
+    padding: 20px;
+}
+
+.posts-list .post-loop {
+    margin-bottom: 40px;
 }

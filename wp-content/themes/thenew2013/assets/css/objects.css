@@ -2,10 +2,8 @@
    Logo
    ------------------------------------------------------- */
 
-.header .thenew-logo {
+.thenew-logo {
   display: inline-block;
-  width: 200px;
-  height: 200px;
   *display: inline;
   *zoom: 1;
 }
@@ -20,7 +18,7 @@
 .thenew-logo .demi:before,
 .thenew-logo .demi:after,
 .thenew-logo .demi {
-  border-color: #eee;
+  border-color: #7258a1;
   border-style: solid;
 }
 
@@ -113,4 +111,26 @@
 .thenew-logo:hover .demi {
   border-bottom: 30px solid transparent;
   border-left: 30px solid transparent;
+}
+
+
+/*Logo 100*/
+.thenew-logo.logo-100 {
+  width: 100px;
+  height: 100px;
+}
+.thenew-logo.logo-100,
+.thenew-logo.logo-100 .demi {
+  border-width: 10px;
+}
+.thenew-logo.logo-100::after,
+.thenew-logo.logo-100 .demi::before,
+.thenew-logo.logo-100 .demi::after {
+  border-width: 5px;
+}
+.thenew-logo.logo-100:hover .demi,
+.thenew-logo.logo-100 .demi {
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-radius: 15px;
 }

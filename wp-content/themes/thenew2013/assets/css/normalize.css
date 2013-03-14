@@ -51,31 +51,29 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5 {
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    line-height: 1.2;
     display: block;
 }
 
 h1, .h1 {
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 30px;
 }
 
 h2, .h2 {
     margin: 10px 0 5px 0;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 26px;
 }
 
 h3, .h3 {
     margin: 5px 0;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 22px;
 }
 
 h4, .h4 {
     margin: 5px 0;
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 18px;
 }
 
 h1:first-child, .h1:first-child,
@@ -86,33 +84,22 @@ h5:first-child, .h5:first-child {
     margin-top: 0;
 }
 
-p,
-li {
-    font-size: 12px;
-    line-height: 16px;
+.post-content {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1f1f23;
 }
 
-/* ----------------------------------------------------------
-   Structure
-   ------------------------------------------------------- */
-
-.le-content ul,
-p {
-    margin-bottom: 12px;
+.post-content p,
+.post-content li,
+.post-content img {
+  margin: 0 0 30px 0;
 }
 
-.le-content ul ul {
-    margin-bottom: 0;
-    padding-left: 12px;
-}
-
-.le-content ul:last-child,
-p:last-child {
-    margin-bottom: 0;
-}
-
-.le-content li {
-    list-style: inside disc;
+.post-content p:last-child,
+.post-content li:last-child,
+.post-content img:last-child {
+  margin: 0 0 0 0;
 }
 
 table {
@@ -124,31 +111,12 @@ table {
    ------------------------------------------------------- */
 
 a {
-    color: #69C;
+    color: #7258a1;
 }
 
-/* l'ajout d'un id permet de ne pas avoir à re-styliser :hover si on change la couleur plus tard */
-a:hover,
-#main-container a:hover {
-    color: #C96;
-}
-
-.aimginv {
-    opacity: 0.70;
-    filter: alpha(opacity=70);
-}
-
-/* L'opacité à .99 permet d'éviter un effet disgracieux sur chrome */
-.aimginv:hover,
-.aimg {
-    opacity: 0.99;
-    filter: alpha(opacity=99);
-}
-
-.aimg:hover,
-a:hover img {
-    opacity: 0.80;
-    filter: alpha(opacity=80);
+a:hover {
+    color: #7258a1;
+    border-bottom: 1px solid #7258a1;
 }
 
 /* ----------------------------------------------------------
