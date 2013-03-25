@@ -3,15 +3,24 @@
 get_header();
 ?>
 <nav id="sidenav" class="sidenav">
-  <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
-    <div class="t demi"></div>
-    <div class="n demi"></div>
-</a>
-<ul class="cf menu">
-    <li><a href="/blog">Blog</a></li>
-    <li><a href="/works">Works</a></li>
-    <li><a href="/about">Profile</a></li>
-</ul>
+    <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
+        <div class="t demi"></div>
+        <div class="n demi"></div>
+    </a>
+    <ul class="cf menu">
+        <li>
+            <a href="/blog"><i>Blog</i></a>
+            <a href="/blog"><i>Blog</i></a>
+        </li>
+        <li>
+            <a href="/works"><i>Works</i></a>
+            <a href="/works"><i>Works</i></a>
+        </li>
+        <li>
+            <a href="/about"><i>Profile</i></a>
+            <a href="/about"><i>Profile</i></a>
+        </li>
+    </ul>
 </nav>
 <div class="main-col">
     <ul class="posts-list">
@@ -23,10 +32,11 @@ get_header();
           );
         query_posts($q_args);
         while (have_posts()) : the_post(); ?>
-            <li class="post-loop">
-                <?php
-                the_title();
-                ?>
+            <li class="post-loop blabla ">
+                <h1 class="post-title">
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                </h1>
                 <div class="post-content">
                   <?php
                   the_content();

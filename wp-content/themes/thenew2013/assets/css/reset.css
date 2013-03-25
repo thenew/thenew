@@ -21,7 +21,6 @@ menu,nav,section,video,abbr,eventsource,mark,meter,time,progress,output,bb {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent no-repeat top left;
-    opacity: .9999;
 }
 article,aside,audio,canvas,datagrid,datalist,details,dialog,figure,
 figcaption,footer,header,hgroup,menu,nav,section,video {display:block;}

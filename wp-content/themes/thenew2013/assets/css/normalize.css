@@ -43,7 +43,7 @@ input[type="submit"],input[type="image"],button{cursor:pointer;}
 
 body {
     font: 62.5%/1 sans-serif;
-    color: #212121;
+    color: #5e5e5d;
 }
 
 h1, .h1,
@@ -57,50 +57,88 @@ h5, .h5 {
     display: block;
 }
 
-h1, .h1 {
-    font-size: 30px;
+.blabla {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5e5e5d;
 }
 
-h2, .h2 {
-    margin: 10px 0 5px 0;
-    font-size: 26px;
+.blabla h1,
+.blabla h2,
+.blabla h3,
+.blabla h4,
+.blabla h5,
+.blabla img,
+.blabla ul,
+.blabla p {
+    margin: 0 0 30px 0;
 }
 
-h3, .h3 {
-    margin: 5px 0;
-    font-size: 22px;
+.blabla h1:last-child,
+.blabla h2:last-child,
+.blabla h3:last-child,
+.blabla h4:last-child,
+.blabla h5:last-child,
+.blabla img:last-child,
+.blabla ul:last-child,
+.blabla p:last-child {
+    margin: 0 0 0 0;
 }
 
-h4, .h4 {
-    margin: 5px 0;
-    font-size: 18px;
+.blabla h1 {
+    font-size: 50px;
+    font-weight: normal;
+    color: #7258a1;
 }
 
-h1:first-child, .h1:first-child,
-h2:first-child, .h2:first-child,
-h3:first-child, .h3:first-child,
-h4:first-child, .h4:first-child,
-h5:first-child, .h5:first-child {
-    margin-top: 0;
+.blabla h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: #7258a1;
 }
 
-.post-content {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #1f1f23;
+.blabla ul {
+    padding-left: 60px;
+    color: #eb5f3a;
+    list-style-type: none;
 }
 
-.post-content p,
-.post-content li,
-.post-content img {
-  margin: 0 0 30px 0;
+.blabla li {
+    color: #5e5e5d;
+    margin-bottom: 10px;
 }
 
-.post-content p:last-child,
-.post-content li:last-child,
-.post-content img:last-child {
-  margin: 0 0 0 0;
+/* Note
+   ----------------------- */
+
+.blabla h5,
+.note {
+    background: #fef9c7;
+    color: #8d7825;
+    font-weight: normal;
+    padding: 30px 30px 30px 60px;
+    font-size: 16px;
+    line-height: 1.7;
+    position: relative;
 }
+
+.blabla h5:after,
+.note:after {
+    content: "Note";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #f9ec6e;
+    font-size: 12px;
+}
+
 
 table {
     width: 100%;
@@ -116,7 +154,6 @@ a {
 
 a:hover {
     color: #7258a1;
-    border-bottom: 1px solid #7258a1;
 }
 
 /* ----------------------------------------------------------

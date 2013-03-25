@@ -8,7 +8,7 @@
   <meta name="Thenew" content="thenew.fr, le site de Rémy Barthez" />
   <meta name="keywords" content="remy barthez, rémy barthez, rémy, barthez, ry barthez, ry, ry.barthez, remi barthez, rémi barthez, rémi, bartez, barthes, bartes, ry.barthez.free.fr, xenon-360, xenon360, thenew.fr, thenew, the new, twitter.com/rybarthez, remybarthez.fr, remy.barthez.fr, remybarthez.com, developer web, captain ravage, ico, mig" />
   <meta name="author" content="Rémy Barthez" />
-  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/z-all.css" type="text/css" media="screen" />
   <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
   <link rel="icon" type="image/png" href="favicon.png" />
