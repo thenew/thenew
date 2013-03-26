@@ -143,6 +143,20 @@ body {
     width: 100%;
 }
 
+.sidenav .menu li a:first-child {
+    background-color: hsl(261, 29%, 49%);
+}
+
+.sidenav .menu li + li a:first-child {
+    background-color: hsl(251, 29%, 49%);
+}
+
+.sidenav .menu li + li + li a:first-child {
+    background-color: hsl(241, 29%, 49%);
+}
+
+
+
 .main-col {
     position: relative;
     z-index: 1;
@@ -162,6 +176,10 @@ body {
 
 .post-title {
     position: relative;
+}
+
+.post-title a:after {
+    border: none;
 }
 
 .post-title a:first-child {
