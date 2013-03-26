@@ -53,7 +53,7 @@ h4, .h4,
 h5, .h5 {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1;
     display: block;
 }
 
@@ -109,6 +109,34 @@ h5, .h5 {
 .blabla li {
     color: #5e5e5d;
     margin-bottom: 10px;
+}
+
+.blabla a {
+    position: relative;
+}
+
+.blabla a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #7258a1;
+    -webkit-transition: width .2s ease-in-out;
+    -moz-transition: width .2s ease-in-out;
+    -o-transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
+}
+
+.blabla a:focus:after,
+.blabla a:hover:after {
+    width: 100%;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
 }
 
 /* Note

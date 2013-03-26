@@ -1,19 +1,37 @@
-<?php get_header(); ?>
-<div class="wrapper">
-
-<section>
-	<?php if (have_posts()) :
-		while (have_posts()) : the_post();
-			require "post.php";
-                        edit_post_link('Modifier cet article','','.');
-			comments_template();
-		endwhile;
-	else: ?>
-	
-		<p>Désolé, aucun article ne correspond à vos critères.</p>
-		
-	<?php endif; ?>
-</section>
-		
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_header();
+?>
+<nav id="sidenav" class="sidenav">
+    <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
+        <div class="t demi"></div>
+        <div class="n demi"></div>
+    </a>
+    <ul class="cf menu">
+        <li>
+            <a href="/blog"><i>Blog</i></a>
+            <a href="/blog"><i>Blog</i></a>
+        </li>
+        <li>
+            <a href="/works"><i>Works</i></a>
+            <a href="/works"><i>Works</i></a>
+        </li>
+        <li>
+            <a href="/about"><i>Profile</i></a>
+            <a href="/about"><i>Profile</i></a>
+        </li>
+    </ul>
+</nav>
+<div class="main-col">
+    <?php if (have_posts ()) : the_post(); ?>
+        <div class="post-loop blabla ">
+            <h1 class="post-title"><?php the_title(); ?></h1>
+            <div class="post-content">
+            <?php the_content(); ?>
+            </div>
+        </div>
+  <?php endif;
+  wp_reset_query();
+  ?>
+</div>
+<?php
+get_footer(); ?>
