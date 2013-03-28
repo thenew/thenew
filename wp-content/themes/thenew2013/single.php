@@ -2,10 +2,6 @@
 get_header();
 ?>
 <nav id="sidenav" class="sidenav">
-    <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
-        <div class="t demi"></div>
-        <div class="n demi"></div>
-    </a>
     <ul class="cf menu">
         <li>
             <a href="/blog"><i>Blog</i></a>
@@ -20,18 +16,23 @@ get_header();
             <a href="/about"><i>Profile</i></a>
         </li>
     </ul>
+    <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
+        <div class="t demi"></div>
+        <div class="n demi"></div>
+    </a>
 </nav>
-<div class="main-col">
-    <?php if (have_posts ()) : the_post(); ?>
-        <div class="post-loop blabla ">
+<?php if (have_posts ()) : the_post(); ?>
+    <div class="single-thumb">
+        <?php the_post_thumbnail(); ?>
+    </div>
+    <div class="main-col">
+        <div class="post-loop blabla post-single">
             <h1 class="post-title"><?php the_title(); ?></h1>
-            <div class="post-content">
-            <?php the_content(); ?>
+            <div class="cf post-content">
+                <?php the_content(); ?>
             </div>
         </div>
-  <?php endif;
-  wp_reset_query();
-  ?>
-</div>
-<?php
-get_footer(); ?>
+    </div>
+<?php endif;
+wp_reset_query();
+get_footer();

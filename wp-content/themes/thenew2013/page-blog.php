@@ -22,21 +22,22 @@ get_header();
         </li>
     </ul>
 </nav>
-<div class="main-col">
+<div id="main-col" class="main-col">
     <ul class="posts-list">
         <?php
         $q_args = array(
           'post_type'      => 'post',
-          'posts_per_page' => 2,
+          'posts_per_page' => 8,
           'paged'          => $paged
           );
         query_posts($q_args);
         while (have_posts()) : the_post(); ?>
-            <li class="post-loop blabla ">
+            <li class="post-loop blabla">
                 <h1 class="post-title">
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
+                <?php the_post_thumbnail(); ?>
                 <div class="post-content">
                   <?php
                   the_content();
@@ -47,6 +48,7 @@ get_header();
       wp_reset_query();
       ?>
     </ul>
+    <div id="overview" class="overview"></div>
 </div>
 <?php
 get_footer(); ?>

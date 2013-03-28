@@ -1,1 +1,7 @@
-window.addEvent('domready',function(){});
+window.addEvent('domready',function(){
+
+    // $$('.post-content a').each(function(a,i){
+    //     wOverview(a);
+    // });
+
+});

@@ -83,7 +83,7 @@ h5, .h5 {
 .blabla img:last-child,
 .blabla ul:last-child,
 .blabla p:last-child {
-    margin: 0 0 0 0;
+    margin-bottom: 0;
 }
 
 .blabla h1 {
@@ -109,6 +109,47 @@ h5, .h5 {
 .blabla li {
     color: #5e5e5d;
     margin-bottom: 10px;
+}
+
+.blabla img {
+    display: block;
+}
+
+.blabla .alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-left: -200px;
+}
+
+.blabla .alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+.blabla .aligncenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blabla .wp-caption {
+    position: relative;
+}
+
+.blabla .wp-caption img {
+    width: 100%;
+}
+
+.blabla .wp-caption-text {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 11px;
+    color: #fff;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.8);
+    padding: 2px 5px;
+    background-color: rgba(0,0,0,.5);
 }
 
 .blabla a {

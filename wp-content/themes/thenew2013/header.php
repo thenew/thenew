@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <script src="<?php bloginfo('template_directory'); ?>/assets/js/mootools-yui-compressed.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/assets/js/functions.js"></script>
   <script src="<?php bloginfo('template_directory'); ?>/assets/js/events.js"></script>
   <!--[if lt IE 9]>
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/html5.js"></script>

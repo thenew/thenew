@@ -9,6 +9,7 @@ body {
 }
 
 .main {
+    position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -88,7 +89,7 @@ body {
 }
 
 .sidenav .menu {
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: left;
 }
 
@@ -158,11 +159,12 @@ body {
 
 
 .main-col {
-    position: relative;
+    /*position: relative;*/
     z-index: 1;
     /*display: table-cell;*/
     /*width: 800px;*/
-    padding-left: 200px;
+    margin-left: 180px;
+    padding-left: 20px;
     /*vertical-align: top;*/
 }
 
@@ -171,7 +173,12 @@ body {
 }
 
 .posts-list .post-loop {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+}
+
+.posts-list .post-loop + .post-loop {
+    border-top: 3px solid #ddd;
+    padding-top: 40px;
 }
 
 .post-title {
@@ -200,4 +207,78 @@ body {
     .main-col {
         padding-left: 160px;
     }
+}
+
+/* ----------------------------------------------------------
+   Overview
+   ------------------------------------------------------- */
+
+.main-col .overview {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    border: 3px solid black;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transition: all .2s cubic-bezier(.8,.4,.4,.4) 1s;
+    transition: all .2s cubic-bezier(.8,.4,.4,.4) 1s;
+}
+
+.main-col .overview.active {
+    opacity: 1;
+    -webkit-transition: all .2s cubic-bezier(.8,.4,.4,.4);
+    transition: all .2s cubic-bezier(.8,.4,.4,.4);
+}
+
+.main-col .overview iframe {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    zoom: 0.15;
+    -webkit-transform: scale(0.75);
+    -moz-transform:scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.main-col .overview .title {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: #efefef;
+    color: #333;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+}
+
+/* ----------------------------------------------------------
+   Single
+   ------------------------------------------------------- */
+
+.single-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 1040px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.single .main-col {
+    position: relative;
+    margin-top: 120px;
+    background-color: #efefef;
+    padding-top: 20px;
 }
