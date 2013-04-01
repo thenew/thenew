@@ -4,4 +4,6 @@ window.addEvent('domready',function(){
     //     wOverview(a);
     // });
 
+    wParallax($$('.parallax'));
+
 });

@@ -1,5 +1,7 @@
 <?php
 
+define('TEMPLATEPATH', get_bloginfo( 'stylesheet_directory' ));
+
 remove_action('wp_head', 'wlwmanifest_link'); // désactiver la compatibilité avec Windows Live Writer (http://wpchannel.com/desactiver-windows-live-writer-wordpress/)
 
 add_theme_support( 'post-thumbnails' );

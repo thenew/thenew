@@ -75,12 +75,14 @@ body {
 .sidenav {
     position: fixed;
     z-index: 2;
-    bottom: 20px;
+    bottom: 0;
     display: table-cell;
     width: 120px;
-    padding: 0 20px 20px 0;
+    padding: 0 40px 40px 0;
     text-align: right;
     vertical-align: top;
+    background-color: #efefef;
+    background-color: rgba(239, 239, 239, .95);
 }
 
 .sidenav .thenew-logo {
@@ -276,9 +278,19 @@ body {
     overflow: hidden;
 }
 
+.single-thumb .bg {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 1040px;
+    height: 400px;
+}
+
 .single .main-col {
     position: relative;
     margin-top: 120px;
     background-color: #efefef;
+    background-color: rgba(239, 239, 239, .95);
     padding-top: 20px;
 }

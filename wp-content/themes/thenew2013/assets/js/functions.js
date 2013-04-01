@@ -26,3 +26,16 @@ function wOverview(a) {
 
     });
 }
+
+function wParallax(els) {
+    if(!els) return;
+    window.addEvent('scroll', function(e) {
+        els.each(function(el,i){
+            var gap = window.getScrollTop();
+            gap = -(gap/2);
+            el.setStyles({
+                'background-position': '50% ' + gap +'px'
+            });
+        });
+    });
+}
