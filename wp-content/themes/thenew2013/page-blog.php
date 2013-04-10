@@ -31,7 +31,6 @@ get_header();
       wp_reset_query();
       ?>
     </ul>
-    <div id="overview" class="overview"></div>
 </div>
 <?php
 get_footer(); ?>

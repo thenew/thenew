@@ -1,4 +1,5 @@
 <?php
+/* Template name: CV */
 get_header(); the_post();
 ?>
 <nav id="sidenav" class="sidenav">
