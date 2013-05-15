@@ -103,9 +103,9 @@
 .thenew-logo .demi,
 .thenew-logo .demi:before,
 .thenew-logo .demi:after {
-  -moz-transition: border-color .4s ease-in-out;
+/*  -moz-transition: border-color .4s ease-in-out;
   -o-transition: border-color .4s ease-in-out;
-  transition: border-color .4s ease-in-out;
+  transition: border-color .4s ease-in-out;*/
 }
 
 .thenew-logo:hover .demi {

@@ -228,6 +228,9 @@ body {
 
 .sidenav .menu.fx-closed .mask {
     width: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
     /*font-size: 14px;*/
     /*font-weight: 900;*/
 }
@@ -374,3 +377,9 @@ body {
     background-color: rgba(239, 239, 239, .95);
     padding-top: 20px;
 }
+
+/* ----------------------------------------------------------
+   Page CV
+   ------------------------------------------------------- */
+
+
