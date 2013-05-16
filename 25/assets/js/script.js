@@ -2,9 +2,16 @@ window.addEvent('domready',function(){
 
     var viewportHeight = document.documentElement.clientHeight;
 
+    // Go
     $('js-go').setStyles({
-        top: viewportHeight
+        opacity: 0
     });
+    setTimeout(function() {
+        $('js-go').setStyles({
+            opacity: 1,
+            top: viewportHeight
+        });
+    }, 300);
 
     var pActive = 1;
 
@@ -16,20 +23,31 @@ window.addEvent('domready',function(){
 
         var currentScroll = window.getScroll().y;
 
-        var active = Math.floor(currentScroll / 325) + 1;
+        // hide Go
+        if(currentScroll > 300) {
+            $('js-go').setStyles({opacity: 0.05});
+        }
+
+        // Diapo
+        var active = Math.floor(currentScroll / 290) + 1;
         if(active != pActive) {
+            if(active > $$('.p').length)
+                active = $$('.p').length;
+
+            $$('.p'+pActive).morph({opacity:0})
+                .removeClass('active');
             pActive = active;
-            $$('.p').morph({opacity:0});
             $$('.p'+active).morph({opacity:1})
                 .addClass('active');
         }
 
+        // Figures
         $$('.l').each(function(l,i) {
 
             // Défixer
             if(l.retrieve('breakpointH') && currentScroll < l.retrieve('breakpointH')) {
                 l.setStyles({
-                    position: 'absolute',
+                    position: 'absolute'
                     // top: '140px'
                 });
             }
@@ -37,7 +55,7 @@ window.addEvent('domready',function(){
             // Fixer
             if(l.getPosition().y - currentScroll < 140) {
                 l.setStyles({
-                    position: 'fixed',
+                    position: 'fixed'
                     // top: '100px'
                 });
                 l.store('breakpointH', currentScroll);

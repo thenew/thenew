@@ -13,6 +13,7 @@
 
 body {
     font-family: 'brandon_grotesqueregular', Consolas, sans-serif;
+    letter-spacing: 6px;
     text-align: center;
     color: #fff;
     font-size: 34px;
@@ -56,6 +57,11 @@ body {
 .bg .p13 { background-image: url(../img/p/p13.jpg); }
 .bg .p14 { background-image: url(../img/p/p14.jpg); }
 .bg .p15 { background-image: url(../img/p/p15.jpg); }
+.bg .p16 { background-image: url(../img/p/p16.jpg); }
+.bg .p17 { background-image: url(../img/p/p17.jpg); }
+.bg .p18 { background-image: url(../img/p/p18.jpg); }
+.bg .p19 { background-image: url(../img/p/p19.jpg); }
+.bg .p20 { background-image: url(../img/p/p20.jpg); }
 
 .bg .p1 {
     opacity: 1;
@@ -154,6 +160,10 @@ body {
     line-height: 1.1;
     width: 400px;
     margin: -100px auto 0;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
 }
 
 .part .l {
