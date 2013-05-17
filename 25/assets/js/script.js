@@ -29,7 +29,7 @@ window.addEvent('domready',function(){
         }
 
         // Diapo
-        var active = Math.floor(currentScroll / 290) + 1;
+        var active = Math.floor(currentScroll / 280) + 1;
         if(active != pActive) {
             if(active > $$('.p').length)
                 active = $$('.p').length;
