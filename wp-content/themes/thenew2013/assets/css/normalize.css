@@ -152,10 +152,14 @@ h5, .h5 {
     background-color: rgba(0,0,0,.5);
 }
 
+.pagination a,
+.post-metas a,
 .blabla a {
     position: relative;
 }
 
+.pagination a:after,
+.post-metas a:after,
 .blabla a:after {
     content: '';
     position: absolute;
@@ -171,6 +175,19 @@ h5, .h5 {
     transition: width .2s ease-in-out;
 }
 
+.pagination a:after {
+    left: auto;
+    right: 0;
+}
+.pagination .sep + a:after {
+    left: 0;
+    right: auto;
+}
+
+.pagination a:focus:after,
+.pagination a:hover:after,
+.post-metas a:focus:after,
+.post-metas a:hover:after,
 .blabla a:focus:after,
 .blabla a:hover:after {
     width: 100%;
@@ -256,3 +273,17 @@ a img {
     -o-transition: all .2s;
     transition: all .2s;
 }
+
+/* ----------------------------------------------------------
+   CLearfix
+   ------------------------------------------------------- */
+
+​.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }

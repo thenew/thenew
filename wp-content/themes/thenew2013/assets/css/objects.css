@@ -134,3 +134,38 @@
   border-left: 15px solid transparent;
   border-radius: 15px;
 }
+
+/* ----------------------------------------------------------
+   Pagination
+   ------------------------------------------------------- */
+
+.pagination {
+    margin: 10px auto 20px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.pagination,
+.pagination a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px;
+}
+
+.pagination .sep {
+    position: relative;
+    top: 3px;
+    margin: 0 5px;
+    color: #7258a1;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.pagination a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}

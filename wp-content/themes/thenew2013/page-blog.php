@@ -10,12 +10,12 @@ get_header();
         <?php
         $q_args = array(
           'post_type'      => 'post',
-          'posts_per_page' => 8,
+          'posts_per_page' => 1,
           'paged'          => $paged
           );
         query_posts($q_args);
         while (have_posts()) : the_post(); ?>
-            <li class="post-loop blabla">
+            <li class="cf post-loop blabla">
                 <h1 class="post-title">
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -27,10 +27,17 @@ get_header();
                   ?>
               </div>
           </li>
-      <?php endwhile;
-      wp_reset_query();
-      ?>
+      <?php endwhile; ?>
     </ul>
+    <div class="cf pagination">
+        <?php
+        posts_nav_link( ' <span class="sep">/</span> ', '<span class="prev">Plus récents</span>', '<span class="next">Plus anciens</span>'  );
+        ?>
+    </div>
+    <?php
+    wp_reset_query();
+    ?>
+
 </div>
 <?php
 get_footer(); ?>
