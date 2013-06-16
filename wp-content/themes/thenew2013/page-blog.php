@@ -2,9 +2,7 @@
 /* Template name: Blog */
 get_header();
 ?>
-<nav id="sidenav" class="sidenav">
-    <?php include TEMPLATEPATH .'/nav.php'; ?>
-</nav>
+<?php include TEMPLATEPATH .'/nav.php'; ?>
 <div id="main-col" class="main-col">
     <ul class="posts-list">
         <?php
@@ -17,7 +15,6 @@ get_header();
         while (have_posts()) : the_post(); ?>
             <li class="cf post-loop blabla">
                 <h1 class="post-title">
-                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
                 <?php the_post_thumbnail(); ?>

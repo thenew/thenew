@@ -10,12 +10,9 @@ body {
 
 .main {
     position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     max-width: 1040px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0;
     color: #5e5e5d;
     background-color: #efefef;
 }
@@ -78,7 +75,7 @@ body {
     bottom: 0;
     display: table-cell;
     width: 120px;
-    padding: 0 40px 40px 0;
+    padding: 0 40px 40px 20px;
     text-align: right;
     vertical-align: top;
     background-color: #efefef;
@@ -94,78 +91,7 @@ body {
     padding: 20px 0 20px 0;
     text-align: left;
 }
-/*
-.sidenav .menu li {
-    height: 36px;
-    position: relative;
-    cursor: pointer;
-}
 
-.sidenav .menu a {
-    text-transform: uppercase;
-    font-family: 'Quicksand',sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #7258a1;
-}
-
-.post-title a:first-child,
-.sidenav .menu a {
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.sidenav .menu li a i {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    padding-left: 2px;
-}
-
-.post-title a:first-child,
-.sidenav .menu li a:first-child {
-    z-index: 2;
-    background-color: #7258a1;
-    color: #efefef;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    -webkit-transition: width .4s cubic-bezier(.8,.4,.4,.4);
-    transition: width .4s cubic-bezier(.8,.4,.4,.4);
-}
-
-.post-title:hover a:first-child,
-.sidenav .menu li:hover a:first-child {
-    width: 100%;
-}
-
-.sidenav .menu li a:first-child {
-    background-color: hsl(261, 29%, 49%);
-}
-
-.sidenav .menu li + li a:first-child {
-    background-color: hsl(251, 29%, 49%);
-}
-
-.sidenav .menu li + li + li a:first-child {
-    background-color: hsl(241, 29%, 49%);
-}
-
-.sidenav .menu .blog-link i {
-    padding-left: 2px;
-}
-
-.sidenav .menu .works-link i {
-    padding-left: 3px;
-    letter-spacing: 1px;
-}
-*/
 .sidenav .menu li {
     text-align: center;
     position: relative;
@@ -241,16 +167,10 @@ body {
     transition-delay: 0s;
 }
 
-
-
 .main-col {
-    /*position: relative;*/
     z-index: 1;
-    /*display: table-cell;*/
-    /*width: 800px;*/
-    margin-left: 180px;
-    padding-left: 20px;
-    /*vertical-align: top;*/
+    margin-left: 200px;
+    padding: 0 20px;
 }
 
 .post-list {

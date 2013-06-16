@@ -1,9 +1,5 @@
-<?php
-get_header();
-?>
-<nav id="sidenav" class="sidenav">
-    <?php include TEMPLATEPATH .'/nav.php'; ?>
-</nav>
+<?php get_header(); ?>
+<?php include TEMPLATEPATH .'/nav.php'; ?>
 <?php if (have_posts ()) : the_post();
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail', false)
     ?>
