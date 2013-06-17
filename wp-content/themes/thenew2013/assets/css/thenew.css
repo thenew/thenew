@@ -138,6 +138,9 @@ body {
     color: #7258a1;
     font-size: 24px;
     font-weight: bold;
+    opacity: 1;
+    background-color: #efefef;
+    transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
 }
 
 .sidenav .menu .mask .blog-link {
@@ -153,18 +156,40 @@ body {
 }
 
 .sidenav .menu.fx-closed .mask {
+    position: relative;
     width: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     /*font-size: 14px;*/
     /*font-weight: 900;*/
 }
 
+.sidenav .menu.fx-closed .mask a {
+    opacity: 0;
+}
+
+.sidenav .menu .mask .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -2px;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #eadffb;
+    box-shadow: 0 0 0 4px rgba(114,88,161,.1), 0 0 2px 2px rgba(114,88,161,.4), 0 0 0 2px rgba(114,88,161,.4);
+    border-radius: 50%;
+}
+
 .sidenav .menu.fx-closed .fx-over .mask {
     width: 120px;
+    border-radius: 0;
     transition-duration: .2s;
     transition-delay: 0s;
+}
+
+.sidenav .menu.fx-closed .fx-over .mask a {
+    opacity: 1;
+    transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
 }
 
 .main-col {

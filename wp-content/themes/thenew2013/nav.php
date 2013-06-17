@@ -2,16 +2,19 @@
     <ul id="menu" class="cf menu">
         <li>
             <div class="mask">
+                <div class="dot"></div>
                 <a class="blog-link" href="/blog">Blog</a>
             </div>
         </li>
         <li>
             <div class="mask">
+                <div class="dot"></div>
                 <a class="works-link" href="/works">Works</a>
             </div>
         </li>
         <li>
             <div class="mask">
+                <div class="dot"></div>
                 <a class="profile-link" href="/profil">Profile</a>
             </div>
         </li>
