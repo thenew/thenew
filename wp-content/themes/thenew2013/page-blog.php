@@ -1,9 +1,9 @@
 <?php
 /* Template name: Blog */
 get_header();
+include TEMPLATEPATH .'/nav.php';
 ?>
-<?php include TEMPLATEPATH .'/nav.php'; ?>
-<div id="main-col" class="main-col">
+<div class="main-col">
     <ul class="posts-list">
         <?php
         $q_args = array(
@@ -37,4 +37,4 @@ get_header();
 
 </div>
 <?php
-get_footer(); ?>
+get_footer();

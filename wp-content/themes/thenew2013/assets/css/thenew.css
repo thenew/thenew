@@ -61,6 +61,18 @@ body {
 }
 
 /* ----------------------------------------------------------
+   Home Footer
+   ------------------------------------------------------- */
+
+.home-footer {
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ----------------------------------------------------------
    Layout
    ------------------------------------------------------- */
 
@@ -139,7 +151,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     opacity: 1;
-    background-color: #efefef;
     transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
 }
 
@@ -155,6 +166,24 @@ body {
     margin-left: -51px;
 }
 
+.sidenav .menu .mask .dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -2px;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background-color: #eadffb;
+    box-shadow: 0 0 0 4px rgba(114,88,161,.1), 0 0 2px 2px rgba(114,88,161,.2), 0 0 0 3px rgba(114,88,161,.4);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
+    -moz-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
+    -o-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
+    transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
+}
+
 .sidenav .menu.fx-closed .mask {
     position: relative;
     width: 20px;
@@ -167,17 +196,8 @@ body {
     opacity: 0;
 }
 
-.sidenav .menu .mask .dot {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -1px 0 0 -2px;
-    display: block;
-    width: 2px;
-    height: 2px;
-    background-color: #eadffb;
-    box-shadow: 0 0 0 4px rgba(114,88,161,.1), 0 0 2px 2px rgba(114,88,161,.4), 0 0 0 2px rgba(114,88,161,.4);
-    border-radius: 50%;
+.sidenav .menu.fx-closed .mask .dot {
+    opacity: 1;
 }
 
 .sidenav .menu.fx-closed .fx-over .mask {
@@ -189,6 +209,14 @@ body {
 
 .sidenav .menu.fx-closed .fx-over .mask a {
     opacity: 1;
+    transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
+}
+
+.sidenav .menu.fx-closed .fx-over .mask .dot {
+    opacity: 0;
+    -webkit-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
+    -moz-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
+    -o-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
     transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
 }
 
@@ -315,6 +343,7 @@ body {
     height: 400px;
 }
 
+.page .main-col,
 .single .main-col {
     position: relative;
     margin-top: 120px;
@@ -323,10 +352,12 @@ body {
     padding-top: 20px;
 }
 
+.page .post-content,
 .single-post .post-content {
     margin-bottom: 30px;
 }
 
+.page .post-metas,
 .single-post .post-metas {
     height: 30px;
     font-family: 'Consolas', sans-serif;
@@ -334,6 +365,7 @@ body {
     position: relative;
 }
 
+.page .post-metas .border,
 .single-post .post-metas .border {
     position: absolute;
     top: 0;
@@ -346,6 +378,7 @@ body {
     font-size: 27px;
 }
 
+.page .post-metas .metas,
 .single-post .post-metas .metas {
     display: inline-block;
     *display: inline;
@@ -358,5 +391,3 @@ body {
 /* ----------------------------------------------------------
    Page CV
    ------------------------------------------------------- */
-
-
