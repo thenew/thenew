@@ -4,6 +4,8 @@
 Colors
     #7258a1
     rgba(114, 88, 161, .1)
+Animations
+    cubic-bezier(.8,.4,.4,.4)
 */
 
 html {
@@ -101,6 +103,11 @@ body {
 .sidenav .thenew-logo {
     width: 100px;
     height: 100px;
+    transition: opacity .3s cubic-bezier(.8,.4,.4,.4) .7s;
+}
+
+.sidenav.js-focus-mode .thenew-logo {
+    opacity: .1;
 }
 
 .sidenav .menu {
@@ -512,7 +519,12 @@ body {
 }
 
 .works-list .work-title {
+    font-size: 22px;
+    line-height: 1.1;
     text-transform: none;
+    height: 48px;
+    overflow: hidden;
+    margin-bottom: 5px;
 }
 
 /* ----------------------------------------------------------

@@ -5,13 +5,14 @@ include TEMPLATEPATH .'/nav.php';
 <div class="js-ajax-content">
     <?php
     if (have_posts ()) : the_post();
-        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail', false);
-        if(isset($thumb[0])) { ?>
+        $thumb_metas = wp_get_attachment_image_src( get_post_thumbnail_id(), 'post-thumbnail', false);
+        $thumb = (isset($thumb_metas[0])) ? $thumb_metas[0] : null;
+        if($thumb) { ?>
             <div class="single-thumb">
-                <div class="bg parallax" style="background-image:url(<?php echo $thumb[0]; ?>)"></div>
+                <div class="bg parallax" style="background-image:url(<?php echo $thumb; ?>)"></div>
             </div>
         <?php } ?>
-        <div class="main-col single-content">
+        <div class="main-col <?php if($thumb) echo 'single-content'; ?>">
             <div class="post-loop blabla">
                 <h1 class="post-title"><?php the_title(); ?></h1>
                 <div class="cf post-content">
@@ -27,7 +28,7 @@ include TEMPLATEPATH .'/nav.php';
         </div>
     <?php else: ?>
         <div class="main-col">
-            <h2 class="no-content">Aucun article.</h2>
+            <h2 class="no-content">Erreur, ce contenu n'existe pas.</h2>
         </div>
     <?php endif; ?>
 </div>

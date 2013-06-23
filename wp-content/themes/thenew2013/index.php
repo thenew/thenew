@@ -1,4 +1,7 @@
 <?php
+// Redirection temporaire
+// wp_redirect( site_url( '/blog' ), 302 );
+// die;
 get_header();
 include TEMPLATEPATH .'/nav.php';
 ?>

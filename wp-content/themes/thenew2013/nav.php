@@ -3,7 +3,7 @@
         <li>
             <div class="mask">
                 <div class="dot"></div>
-                <a class="blog-link" href="/blog">Blog</a>
+                <a class="blog-link" href="<?php echo site_url( '/blog' ); ?>">Blog</a>
             </div>
         </li>
         <li>
@@ -15,7 +15,7 @@
         <li>
             <div class="mask">
                 <div class="dot"></div>
-                <a class="profile-link" href="/profil">Profile</a>
+                <a class="profile-link" href="<?php echo site_url( '/profile' ); ?>">Profile</a>
             </div>
         </li>
     </ul>

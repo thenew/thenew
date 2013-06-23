@@ -1,12 +1,15 @@
 window.addEvent('domready',function(){
 
-    // $$('.post-content a').each(function(a,i){
-    //     wOverview(a);
-    // });
-
     wParallax($$('.parallax'));
 
+    // Preview of links on iframe
+    $$('.post-content a').each(function(a,i){
+        wOverview(a);
+    });
+
+    // Animations focus mode on menu
     setTimeout(function() {
+        $('sidenav').addClass('js-focus-mode');
         $('menu').addClass('fx-closed');
     }, 3000);
 

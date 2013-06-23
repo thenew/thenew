@@ -71,6 +71,7 @@ class Custom_Post_Type extends Fon_Base_Class
         'show_ui'             => true,
         'supports'            => array('title', 'editor', 'thumbnail'),
         'has_archive'         => true,
+        'rewrite'             => array( 'slug' => $this->post_type_name . 's'),
         'show_in_nav_menus'   => true,
         '_builtin'            => false,
       ),

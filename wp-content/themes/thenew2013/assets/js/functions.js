@@ -13,7 +13,6 @@ function wOverview(a) {
         over.grab(iframe)
             .grab(title)
             .inject(o);
-        console.log('youy');
 
         a.addEvent('mouseleave', function(e){
             // o.removeClass('active');
