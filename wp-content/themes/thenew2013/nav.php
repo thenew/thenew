@@ -9,7 +9,7 @@
         <li>
             <div class="mask">
                 <div class="dot"></div>
-                <a class="works-link" href="/works">Works</a>
+                <a class="works-link" href="<?php echo get_post_type_archive_link( 'work' ); ?>">Works</a>
             </div>
         </li>
         <li>
@@ -19,7 +19,7 @@
             </div>
         </li>
     </ul>
-    <a class="thenew-logo logo-100" href="<?php site_url('/'); ?>">
+    <a class="thenew-logo logo-100" href="<?php echo site_url('/'); ?>">
         <div class="t demi"></div>
         <div class="n demi"></div>
     </a>

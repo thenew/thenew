@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
 .postbox h3 {
-    background: rgba(54, 148, 146, 0.1);
+    background: rgba(114, 88, 161, .2);
+    text-shadow: none;
 }

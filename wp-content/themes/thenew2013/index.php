@@ -1,11 +1,12 @@
-<?php get_header(); ?>
-
+<?php
+get_header();
+include TEMPLATEPATH .'/nav.php';
+?>
 <header class="header v-wrapper">
     <a class="thenew-logo" href="<?php site_url('/'); ?>">
         <div class="t demi"></div><div class="n demi"></div>
     </a>
 </header>
-
 <?php
 $baseline_page = get_page_by_path('baseline');
 if($baseline_page) {
