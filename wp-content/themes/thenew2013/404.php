@@ -7,6 +7,7 @@ include TEMPLATEPATH .'/nav.php';
 <div class="js-ajax-content">
     <div class="main-col">
         <?php if (!empty($param_404)): ?>
+            <h2 class="e404-title">404</h2>
             <h2 class="e404-title"><?php echo $param_404; ?> ? </h2>
             <?php
             $args_404 = array(

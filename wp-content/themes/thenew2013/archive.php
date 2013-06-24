@@ -18,7 +18,7 @@ include TEMPLATEPATH .'/nav.php';
         <ul class="posts-list">
             <?php
             // If page blog
-            if(isset($queried_obj->post_name) && $queried_obj->post_name == "blog") {
+            if(isset($queried_obj) && isset($queried_obj->post_name) && $queried_obj->post_name == "blog") {
                 $q_args = array(
                   'post_type'      => 'post',
                   'posts_per_page' => 5,

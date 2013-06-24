@@ -3,7 +3,7 @@
 /*
 Colors
     #7258a1
-    rgba(114, 88, 161, .1)
+    rgba(114,88,161,.1)
 Animations
     cubic-bezier(.8,.4,.4,.4)
 */
@@ -186,7 +186,7 @@ body {
     width: 2px;
     height: 2px;
     background-color: #fff;
-    box-shadow: 0 0 0 5px rgba(114,88,161,.1), 0 0 1px 1px rgba(114,88,161,.5), 0 0 3px 1px rgba(114,88,161,.2);
+    box-shadow: 0 0 0 7px rgba(114,88,161,.1), 0 0 1px 1px rgba(114,88,161,.5), 0 0 6px 2px rgba(114,88,161,.5);
     border-radius: 50%;
     opacity: 0;
     -webkit-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
@@ -531,6 +531,7 @@ body {
    Page 404
    ------------------------------------------------------- */
 
+.no-content,
 .e404-title {
     text-align: center;
     color: #efefef;
@@ -585,19 +586,19 @@ body {
 }
 
 .minishort-loop:nth-child(odd) a {
-    background-color: rgba(114, 88, 161, .6);
+    background-color: rgba(114,88,161,.6);
 }
 
 .minishort-loop:nth-child(even) a {
-    background-color: rgba(114, 88, 161, .4);
+    background-color: rgba(114,88,161,.4);
 }
 
 .minishort-loop:nth-child(odd):hover a {
-    background-color: rgba(114, 88, 161, .9);
+    background-color: rgba(114,88,161,.9);
 }
 
 .minishort-loop:nth-child(even):hover a {
-    background-color: rgba(114, 88, 161, .75);
+    background-color: rgba(114,88,161,.75);
 }
 
 .minishort-loop .thumb {
@@ -609,9 +610,20 @@ body {
 }
 
 .minishort-loop .post-title {
-    color: #fff;
-    font-size: 22px;
+    color: #fefefe;
+    font-size: 27px;
     line-height: 1.1;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    hyphens: auto;
+    text-shadow:
+      1px 1px 1px rgba(114,88,161,.37),
+      2px 2px 1px rgba(114,88,161,.36),
+      3px 2px 1px rgba(114,88,161,.33),
+      5px 3px 1px rgba(114,88,161,.30),
+      6px 3px 1px rgba(114,88,161,.28),
+      7px 4px 2px rgba(114,88,161,.26),
+      8px 5px 2px rgba(114,88,161,.24);
 }
 
 .minishort-loop .post-metas {
