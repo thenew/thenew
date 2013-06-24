@@ -30,6 +30,7 @@ include TEMPLATEPATH .'/nav.php';
         <div class="single-thumb">
             <div class="bg parallax" style="background-image:url(<?php echo $thumb[0]; ?>)"></div>
         </div>
+        <div class="single-content-top"></div>
         <div class="main-col single-content">
             <div class="post-loop blabla">
                 <h1 class="post-title"><?php the_title(); ?></h1>

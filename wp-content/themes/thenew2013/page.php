@@ -12,6 +12,7 @@ include TEMPLATEPATH .'/nav.php';
                 <div class="bg parallax" style="background-image:url(<?php echo $thumb; ?>)"></div>
             </div>
         <?php } ?>
+        <?php if($thumb) echo '<div class="single-content-top"></div>'; ?>
         <div class="main-col <?php if($thumb) echo 'single-content'; ?>">
             <div class="post-loop blabla">
                 <h1 class="post-title"><?php the_title(); ?></h1>

@@ -378,9 +378,12 @@ body {
     height: 400px;
 }
 
+.single-content-top {
+    height: 120px;
+}
+
 .main-col.single-content {
     position: relative;
-    top: 120px;
     background-color: #efefef;
     background-color: rgba(239, 239, 239, .95);
     padding-top: 20px;
