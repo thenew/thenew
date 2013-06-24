@@ -1,5 +1,24 @@
 <?php
 get_header();
+
+/* Custom styles */
+
+$custom_color = get_post_meta( get_the_ID(), 'fon_custom_color', 1 );
+$custom_font = get_post_meta( get_the_ID(), 'fon_custom_font_name', 1 );
+if(!empty($custom_font))
+    echo "\n".'<link href="http://fonts.googleapis.com/css?family='.$custom_font.'" rel="stylesheet" type="text/css">'."\n";
+
+if(!empty($custom_font) || !empty($custom_color)) echo '<style>';
+echo '.blabla .post-title {';
+if(!empty($custom_font)) echo 'font-family: "'.$custom_font.'";';
+if(!empty($custom_color)) echo 'color: '.$custom_color.';';
+echo '}';
+if(!empty($custom_color))
+    echo '.blabla a, .single-post .post-metas .border { color: '.$custom_color.';}';
+if(!empty($custom_font) || !empty($custom_color)) echo '</style>'."\n";
+
+/* End Custom styles */
+
 include TEMPLATEPATH .'/nav.php';
 ?>
 <div class="js-ajax-content">
@@ -39,4 +58,5 @@ include TEMPLATEPATH .'/nav.php';
     <?php endif;
     wp_reset_query(); ?>
 </div>
+<?php
 get_footer();
