@@ -8,14 +8,15 @@ $custom_font = get_post_meta( get_the_ID(), 'fon_custom_font_name', 1 );
 if(!empty($custom_font))
     echo "\n".'<link href="http://fonts.googleapis.com/css?family='.$custom_font.'" rel="stylesheet" type="text/css">'."\n";
 
-if(!empty($custom_font) || !empty($custom_color)) echo '<style>';
-echo '.blabla .post-title {';
-if(!empty($custom_font)) echo 'font-family: "'.$custom_font.'";';
-if(!empty($custom_color)) echo 'color: '.$custom_color.';';
-echo '}';
-if(!empty($custom_color))
-    echo '.blabla a, .single-post .post-metas .border { color: '.$custom_color.';}';
-if(!empty($custom_font) || !empty($custom_color)) echo '</style>'."\n";
+if(!empty($custom_font) || !empty($custom_color)):
+    echo '<style>.blabla .post-title {';
+    if(!empty($custom_font)) echo 'font-family: "'.$custom_font.'";';
+    if(!empty($custom_color)) echo 'color: '.$custom_color.';';
+    echo '}';
+    if(!empty($custom_color))
+        echo '.blabla a, .single-post .post-metas .border { color: '.$custom_color.';}';
+    echo '</style>'."\n";
+endif;
 
 /* End Custom styles */
 
@@ -39,11 +40,10 @@ include TEMPLATEPATH .'/nav.php';
             <div class="cf post-metas">
                 <span class="border">/</span>
                 <span class="metas">
-                    <?php the_date() ?>
-                    &nbsp;/&nbsp;
-                    <?php
+                    <?php the_date();
                     $posttags = get_the_tags();
                     if ($posttags) {
+                        echo '&nbsp;/&nbsp;';
                         $posttags_count = 0;
                         foreach($posttags as $tag) {
                             if($posttags_count > 0) echo ', ';

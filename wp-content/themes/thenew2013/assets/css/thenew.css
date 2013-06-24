@@ -528,5 +528,101 @@ body {
 }
 
 /* ----------------------------------------------------------
+   Page 404
+   ------------------------------------------------------- */
+
+.e404-title {
+    text-align: center;
+    color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin: 10px auto 60px;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    text-shadow:
+      -1px -1px 0px rgba(20,20,20,.05),
+      1px 1px 1px rgba(20,20,20,.17),
+      2px 2px 1px rgba(20,20,20,.16),
+      4px 3px 1px rgba(20,20,20,.13),
+      6px 4px 1px rgba(20,20,20,.10),
+      7px 5px 1px rgba(20,20,20,.08),
+      8px 6px 2px rgba(20,20,20,.06),
+      10px 7px 2px rgba(20,20,20,.04),
+      11px 8px 2px rgba(20,20,20,.02),
+      12px 9px 4px rgba(20,20,20,.01),
+      15px 10px 5px rgba(20,20,20,.01);
+}
+
+.minishorts-list {
+}
+
+.minishorts-list .minishort-loop {
+    float: left;
+    width: 160px;
+    height: 160px;
+    background-color: #bbb;
+}
+
+.minishort-loop {
+    position: relative;
+}
+
+.minishort-loop a {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #7258a1;
+    background-color: rgba(114, 88, 161, .1);
+    transition: background-color .3s cubic-bezier(.8,.4,.4,.4);
+}
+
+.minishort-loop:nth-child(odd) a {
+    background-color: rgba(114, 88, 161, .6);
+}
+
+.minishort-loop:nth-child(even) a {
+    background-color: rgba(114, 88, 161, .4);
+}
+
+.minishort-loop:nth-child(odd):hover a {
+    background-color: rgba(114, 88, 161, .9);
+}
+
+.minishort-loop:nth-child(even):hover a {
+    background-color: rgba(114, 88, 161, .75);
+}
+
+.minishort-loop .thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.minishort-loop .post-title {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.minishort-loop .post-metas {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------------
    Page CV
    ------------------------------------------------------- */
