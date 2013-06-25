@@ -255,11 +255,20 @@ body {
 
 .posts-list .post-loop + .post-loop {
     position: relative;
-    border-top: 3px solid #ddd;
     padding-top: 40px;
 }
 
 .posts-list .post-loop + .post-loop:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 340px;
+    margin-left: -170px;
+    border-top: 3px solid #ddd;
+}
+
+.posts-list .post-loop + .post-loop:after {
     content: '';
     position: absolute;
     top: -4px;
