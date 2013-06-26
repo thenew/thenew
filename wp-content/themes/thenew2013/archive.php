@@ -18,12 +18,14 @@ include TEMPLATEPATH .'/nav.php';
         <ul class="posts-list">
             <?php
             // If page blog
+            if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
+            elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
+            else { $paged = 1; }
             if(isset($queried_obj) && isset($queried_obj->post_name) && $queried_obj->post_name == "blog") {
                 $q_args = array(
-                  'post_type'      => 'post',
-                  'posts_per_page' => 5,
-                  'paged'          => $paged
-                  );
+                    'post_type'      => 'post',
+                    'paged'          => $paged
+                );
                 query_posts($q_args);
             }
             while (have_posts()) : the_post();
