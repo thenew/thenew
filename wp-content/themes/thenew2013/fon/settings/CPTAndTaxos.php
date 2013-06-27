@@ -10,4 +10,4 @@
    ----------------------------- */
 
 $work = new Custom_Post_Type( 'Work' );
-// $work->add_taxonomy( 'support' );
+$work->add_taxonomy( 'post_tag' );

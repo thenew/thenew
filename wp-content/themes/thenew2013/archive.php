@@ -15,22 +15,28 @@ include TEMPLATEPATH .'/nav.php';
     <?php } ?>
 
     <div class="main-col">
-        <ul class="posts-list">
             <?php
-            // If page blog
             if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
             elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
             else { $paged = 1; }
+            // If page blog
             if(isset($queried_obj) && isset($queried_obj->post_name) && $queried_obj->post_name == "blog") {
                 $q_args = array(
                     'post_type'      => 'post',
                     'paged'          => $paged
                 );
                 query_posts($q_args);
+                echo '<ul class="posts-list">';
+                    while (have_posts()) : the_post();
+                        get_template_part( 'loop', 'short' );
+                    endwhile;
+            } else {
+                echo '<ul class="minishorts-list">';
+                    while (have_posts()) : the_post();
+                        get_template_part( 'loop', 'minishort' );
+                    endwhile;
             }
-            while (have_posts()) : the_post();
-                get_template_part( 'loop', 'short' );
-            endwhile; ?>
+            ?>
         </ul>
         <div class="cf pagination">
             <?php

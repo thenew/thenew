@@ -253,20 +253,22 @@ class Custom_Post_Type extends Fon_Base_Class
 
         if(isset($_POST) && isset($post->ID) && get_post_type($post->ID) == $post_type_name)
         {
-          global $custom_fields;
+            global $custom_fields;
 
-          // Loop through each meta box
-          foreach($custom_fields as $title => $fields)
-          {
-            // Loop through all fields
-            foreach($fields as $label => $type)
-            {
-              $field_id_name  = strtolower(str_replace(' ', '_', $title)) . '_' . strtolower(str_replace(' ', '_', $label));
+            if($custom_fields && is_array($custom_fields)) {
+                // Loop through each meta box
+                foreach($custom_fields as $title => $fields)
+                {
+                    // Loop through all fields
+                    foreach($fields as $label => $type)
+                    {
+                        $field_id_name  = strtolower(str_replace(' ', '_', $title)) . '_' . strtolower(str_replace(' ', '_', $label));
 
-              update_post_meta($post->ID, $field_id_name, $_POST['custom_meta'][$field_id_name] );
+                        update_post_meta($post->ID, $field_id_name, $_POST['custom_meta'][$field_id_name] );
+                    }
+
+                }
             }
-
-          }
         }
       }
     );

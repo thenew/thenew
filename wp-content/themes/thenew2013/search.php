@@ -7,7 +7,6 @@ include TEMPLATEPATH .'/nav.php';
         <h2 class="e404-title"><?php echo get_search_query(); ?> ? </h2>
         <?php
         $args_search = array(
-            'post_type' => array('post', 'work'),
             'posts_per_page' => -1,
             's' => get_search_query()
         );

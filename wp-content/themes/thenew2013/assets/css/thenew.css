@@ -396,14 +396,17 @@ body {
     background-color: #efefef;
     background-color: rgba(239, 239, 239, .95);
     padding-top: 20px;
+    min-height: 400px;
 }
 
 .page .post-content,
+.single-work .post-content,
 .single-post .post-content {
     margin-bottom: 30px;
 }
 
 .page .post-metas,
+.single-work .post-metas,
 .single-post .post-metas {
     height: 30px;
     font-family: 'Consolas', sans-serif;
@@ -412,6 +415,7 @@ body {
 }
 
 .page .post-metas .border,
+.single-work .post-metas .border,
 .single-post .post-metas .border {
     position: absolute;
     top: 0;
@@ -425,6 +429,7 @@ body {
 }
 
 .page .post-metas .metas,
+.single-work .post-metas .metas,
 .single-post .post-metas .metas {
     display: inline-block;
     *display: inline;
@@ -479,13 +484,13 @@ body {
    ------------------------------------------------------- */
 
 .works-list {
-    margin: 0 -70px -30px 0;
+    margin: 0 -70px -20px 0;
 }
 
 .works-list .work-loop {
     float: left;
     width: 220px;
-    margin: 0 70px 30px 0;
+    margin: 0 70px 20px 0;
     text-align: center;
 }
 
@@ -495,7 +500,11 @@ body {
     height: 202px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px;
+    margin: 0 auto 5px;
+}
+
+.works-list .work-loop .thumb:hover {
+    /*box-shadow: 20px 20px 1px rgba(0,0,0,.5);*/
 }
 
 .works-list .work-loop .thumb a {
@@ -520,6 +529,39 @@ body {
     border: 8px solid rgba(114, 88, 161, .9);
 }
 
+.works-list .work-loop .thumb .post-tags {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 202px;
+    height: 202px;
+    padding: 6px 4px 0 6px;
+    border-radius: 50%;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: left;
+    opacity: .1;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    line-height: .9;
+    font-weight: bold;
+    font-size: 36px;
+    color: #efefef;
+    color: rgba(239,239,239,.9);
+    transition: opacity .2s cubic-bezier(.8,.4,.4,.4), background-color .2s cubic-bezier(.8,.4,.4,.4);
+}
+
+.works-list .work-loop .thumb:hover .post-tags {
+    opacity: .8;
+    background-color: rgba(114, 88, 161, .4);
+}
+
 .works-list .work-loop .thumb img {
     position: absolute;
     top: 1px;
@@ -531,10 +573,10 @@ body {
 }
 
 .works-list .work-title {
-    font-size: 22px;
+    font-size: 32px;
     line-height: 1.1;
     text-transform: none;
-    height: 48px;
+    height: 35px;
     overflow: hidden;
     margin-bottom: 5px;
 }
