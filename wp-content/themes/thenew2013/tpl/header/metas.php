@@ -1,14 +1,13 @@
 <?php
 global $post;
 if(is_singular()) {
-    $title = get_the_title();
     $description = strip_tags(strip_shortcodes($post->post_content));
     $url = get_permalink();
 } else {
-    $title = wp_title('-', 0);
     $description = get_bloginfo('description');
     $url = site_url();
 }
+$title = get_bloginfo('name') . ' ' . wp_title('/', 0);
 $image = TEMPLATE_URL.'/screenshot.png';
 $name = get_bloginfo('name');
 

@@ -3,8 +3,10 @@
     <div class="thumb thumb-work">
         <span class="post-tags">
             <?php
-            foreach ($post_tags as $tag) {
-                echo $tag->name . ' ';
+            if($post_tags) {
+                foreach ($post_tags as $tag) {
+                    echo $tag->name . ' ';
+                }
             }
             ?>
         </span>

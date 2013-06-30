@@ -70,7 +70,7 @@ function fon_get_attachment($page_id, $format) {
             'post_type' => 'attachment',
             'numberposts' => 1,
             'post_status' => null,
-            'post_parent' => $post->ID
+            'post_parent' => get_the_ID()
         );
         $attachments = get_posts($args);
         if ($attachments) {
@@ -82,6 +82,12 @@ function fon_get_attachment($page_id, $format) {
     wp_reset_query();
 }
 
+
+function fon_get_thumb_url($format = 'post-thumbnail', $post_id = null ) {
+    $post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), $format, false);
+    return $thumb[0];
+}
 
 function fon_upload_files($imgs) {
     if(!is_array($imgs)) return;

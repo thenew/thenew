@@ -6,7 +6,6 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?> class="no-js" dir="ltr"> <!--<![endif]-->
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php bloginfo('name'); ?> <?php wp_title('/') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -18,6 +17,14 @@
     <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+$baseline_page = get_page_by_path('baseline');
+$header_img = fon_get_thumb_url('full', $baseline_page->ID);
+?>
+
+<body <?php body_class(); ?> style="<?php if(is_front_page()) { echo 'background-image: url('.$header_img.');'; } ?>">
+<div id="top"></div>
+    <?php include TEMPLATE_PATH . '/tpl/front_page.php'; ?>
     <div class="main">
+        <?php include TEMPLATEPATH .'/nav.php'; ?>
         <div class="wrapper">

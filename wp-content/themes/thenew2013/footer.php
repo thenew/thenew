@@ -2,6 +2,7 @@
     <footer>
       <?php wp_footer(); ?>
     </footer>
+    <div class="js-ajax-loader">Loading</div>
   </div>
 
     <!--[if lte IE 8]>

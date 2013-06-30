@@ -8,12 +8,10 @@ Animations
     cubic-bezier(.8,.4,.4,.4)
 */
 
-html {
-}
-
 body {
     font-family: 'Georgia',serif;
     background-color: #ddd;
+    overflow-y: scroll;
 }
 
 .main {
@@ -30,6 +28,59 @@ body {
     text-align: center;
     vertical-align: middle;
 }
+
+/* ----------------------------------------------------------
+   Layout
+   ------------------------------------------------------- */
+
+.main,
+.js-ajax-content,
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.main-col {
+    /*margin-left: 200px;*/
+    /*padding: 40px 20px;*/
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+    padding-left: 200px;
+    /*overflow: hidden;*/
+    -webkit-perspective: 100px;
+    perspective: 100px;
+}
+
+.single-layout .main-col {
+    top: 120px;
+}
+
+.main-col-content {
+    padding: 40px 20px;
+    background-color: #efefef;
+}
+
+.main-col-content.single-content {
+    /*background-color: #efefef;*/
+    /*background-color: rgba(239, 239, 239, .95);*/
+    /*padding-top: 20px;*/
+    /*min-height: 400px;*/
+}
+
+.single-content-top {
+    /*height: 120px;*/
+}
+
 
 /* ----------------------------------------------------------
  Header
@@ -50,15 +101,51 @@ body {
     height: 200px;
 }
 
-.home .baseline {
+/* ----------------------------------------------------------
+   Index
+   ------------------------------------------------------- */
+
+.home {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.front-page-block {
     text-align: center;
+}
+
+.front-page-block .wrapper {
+    width: 100%;
+    max-width: 1040px;
+    padding: 80px 0 50px;
+    margin: 0 auto;
+}
+
+.home .main {
+    box-shadow: 0 0 30px 10px #ddd;
+}
+
+.front-page-block .baseline {
+    margin: 0 auto 50px;
+    font-size: 34px;
+    opacity: .9999;
     font-family: 'Quicksand',sans-serif;
     font-weight: bold;
 }
 
-.home .baseline p {
+.front-page-block p {
     font-size: 34px;
+    line-height: 1.4;
     opacity: .9999;
+}
+
+.front-page-block .home-footer {
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .container {
@@ -69,24 +156,8 @@ body {
 }
 
 /* ----------------------------------------------------------
-   Home Footer
+   Sidenav
    ------------------------------------------------------- */
-
-.home-footer {
-    margin: 10px auto;
-    text-align: center;
-    font-family: 'Quicksand',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* ----------------------------------------------------------
-   Layout
-   ------------------------------------------------------- */
-
-.wrapper {
-    width: 100%;
-}
 
 .sidenav {
     position: fixed;
@@ -231,11 +302,9 @@ body {
     transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
 }
 
-.main-col {
-    z-index: 1;
-    margin-left: 200px;
-    padding: 40px 20px;
-}
+/* ----------------------------------------------------------
+   Posts
+   ------------------------------------------------------- */
 
 .post-list {
     padding: 20px;
@@ -368,6 +437,7 @@ body {
    Single
    ------------------------------------------------------- */
 
+.single-thumb .bg,
 .single-thumb {
     position: absolute;
     top: 0;
@@ -383,20 +453,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    width: 1040px;
-    height: 400px;
-}
-
-.single-content-top {
-    height: 120px;
-}
-
-.main-col.single-content {
-    position: relative;
-    background-color: #efefef;
-    background-color: rgba(239, 239, 239, .95);
-    padding-top: 20px;
-    min-height: 400px;
 }
 
 .page .post-content,

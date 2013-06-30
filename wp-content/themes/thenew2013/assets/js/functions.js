@@ -6,6 +6,7 @@ function wOverview(a) {
             iframe = new Element('iframe', {'src':a.get('href')}),
             title = new Element('span', {'html':a.get('href'), 'class':'title'});
 
+        if(!o) return;
         o.setStyles({
             'top': a.getPosition().y - 30
         }).addClass('active');
