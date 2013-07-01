@@ -22,6 +22,7 @@ endif;
 
 ?>
 <div class="js-ajax-content single-layout">
+    <div class="main-col-push"></div>
     <?php if (have_posts ()) : the_post(); ?>
         <div class="single-thumb">
             <div class="bg parallax" style="background-image:url(<?php echo fon_get_thumb_url('post-thumbnail'); ?>)"></div>

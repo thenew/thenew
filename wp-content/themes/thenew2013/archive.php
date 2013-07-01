@@ -14,6 +14,7 @@ get_header();
         <div class="archives-title"><h1><?php echo $archives_title; ?></h1></div>
     <?php } ?>
 
+    <div class="main-col-push"></div>
     <div class="main-col">
         <div class="main-col-content">
             <?php

@@ -5,6 +5,7 @@ get_header();
 include TEMPLATEPATH .'/nav.php';
 ?>
 <div class="js-ajax-content">
+    <div class="main-col-push"></div>
     <div class="main-col">
         <?php if (!empty($param_404)): ?>
             <h2 class="e404-title">404</h2>

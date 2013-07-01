@@ -4,6 +4,7 @@ get_header();
 include TEMPLATEPATH .'/nav.php';
 ?>
 <div class="js-ajax-content">
+    <div class="main-col-push"></div>
     <?php if (have_posts ()) : the_post(); ?>
         <div class="main-col single-content">
             <div class="post-loop blabla">

@@ -60,8 +60,8 @@
     left: 200px;
     top: 0;
     /*z-index: 1;*/
-    -webkit-animation: stack .9s;
-    animation: stack .9s;
+    -webkit-animation: stack 1.9s;
+    animation: stack 1.9s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -69,17 +69,17 @@
 
 @-webkit-keyframes stack {
     0% {
-        /*-webkit-transform: translate3d(0, 0, 0);*/
+        -webkit-transform: translate3d(0, 0, 0);
         opacity: 1;
     }
-    60% {
+    20% {
         /*-webkit-transform: translate3d(0, 0, -30px);*/
-        /*-webkit-transform: translate3d(0, 0, -10px);*/
+        -webkit-transform: translate3d(0, 0, -10px);
         opacity: .7;
     }
     100% {
         /*-webkit-transform: translate3d(-200px, 0, -30px);*/
-        /*-webkit-transform: translate3d(0, 0, -10px);*/
+        -webkit-transform: translate3d(0, 0, -10px);
         opacity: 0;
     }
 }

@@ -3,6 +3,7 @@
 get_header();
 ?>
 <div class="js-ajax-content">
+    <div class="main-col-push"></div>
     <div class="main-col">
         <div class="main-col-content">
             <ul class="cf works-list">

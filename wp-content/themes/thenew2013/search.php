@@ -3,6 +3,7 @@ get_header();
 include TEMPLATEPATH .'/nav.php';
 ?>
 <div class="js-ajax-content">
+    <div class="main-col-push"></div>
     <div class="main-col">
         <h2 class="e404-title"><?php echo get_search_query(); ?> ? </h2>
         <?php

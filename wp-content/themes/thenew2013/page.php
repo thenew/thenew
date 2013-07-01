@@ -3,6 +3,7 @@ get_header();
 $thumb = fon_get_thumb_url('post-thumbnail');
 ?>
 <div class="js-ajax-content <?php if($thumb) echo 'single-layout' ?>">
+    <div class="main-col-push"></div>
     <?php if (have_posts ()) : the_post(); ?>
         <div class="single-thumb">
             <div class="bg parallax" style="background-image:url(<?php echo $thumb ?>)"></div>

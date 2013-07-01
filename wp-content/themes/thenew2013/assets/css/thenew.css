@@ -61,13 +61,18 @@ body {
     perspective: 100px;
 }
 
-.single-layout .main-col {
-    top: 120px;
+.main-col-push {
+    height: 0;
+}
+
+.single-layout .main-col-push {
+    height: 120px;
 }
 
 .main-col-content {
     padding: 40px 20px;
     background-color: #efefef;
+    background-color: rgba(239, 239, 239, .95);
 }
 
 .main-col-content.single-content {
