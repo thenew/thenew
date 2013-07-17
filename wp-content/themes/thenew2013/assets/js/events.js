@@ -55,7 +55,7 @@ window.addEvent('domready',function(){
                         // Scroll
                         isFxScroll = true;
                         new Fx.Scroll(window, {
-                            duration: 3400,
+                            duration: 400,
                             transition: Fx.Transitions.Sine.easeOut,
                             onComplete: function(){
                                 jaxContent0.addClass('js-ajax-content-0');
