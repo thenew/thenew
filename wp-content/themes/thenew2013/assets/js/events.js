@@ -2,10 +2,12 @@ window.addEvent('domready',function(){
 
     wParallax($$('.parallax, .home'));
 
+    logoLoader();
+
     // Preview of links on iframe
-    $$('.post-content a').each(function(a,i){
+/*    $$('.post-content a').each(function(a,i){
         wOverview(a);
-    });
+    });*/
 
     // Animations focus mode on menu
     setTimeout(function() {
@@ -48,13 +50,14 @@ window.addEvent('domready',function(){
                     data: {'ajax':'1'},
                     onRequest: function(){
                         jaxNavEnabled = false;
+                        document.body.addClass('js-ajax-loading');
 
+                        // Scroll
                         isFxScroll = true;
                         new Fx.Scroll(window, {
                             duration: 3400,
                             transition: Fx.Transitions.Sine.easeOut,
                             onComplete: function(){
-                                document.body.addClass('js-ajax-loading');
                                 jaxContent0.addClass('js-ajax-content-0');
 
                                 // Main col
@@ -171,7 +174,6 @@ window.addEvent('domready',function(){
             onComplete: function() {
 
                 // Main col
-                // console.log(jaxMainCol1);
                 jaxMainCol0.addClass('js-stack-0');
                 if(!jaxMainCol1.hasClass('js-stack-0'))
                     jaxMainCol1.addClass('js-stack-1');

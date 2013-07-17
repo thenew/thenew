@@ -1,8 +1,44 @@
 @charset "UTF-8";
 
-.js-ajax-loading .main {
-    /*overflow: hidden;*/
+/* ----------------------------------------------------------
+   Loader
+   ------------------------------------------------------- */
+
+.loader-box {
+    position: fixed;
+    bottom: 42px;
+    width: 120px;
+    height: 120px;
+    overflow:hidden;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .3s cubic-bezier(.8,.4,.4,.4);
+    /* Fix border-radius overflow webkit bug
+    http://stackoverflow.com/questions/13476942/flexslider-border-radius-does-not-wrap-image-in-chrome-safari-but-will-in-fire/13477255#13477255 */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
+
+.loader-logo {
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+.loader-logo #canvasLoader {
+    display: block;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+}
+
+.js-ajax-loading .loader-box {
+    opacity: 1;
+}
+
+
+/*.js-ajax-loading .main {
+    overflow: hidden;
+}*/
 
 .wrapper {
     -webkit-perspective: 100px;

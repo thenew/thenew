@@ -19,6 +19,9 @@
             </div>
         </li>
     </ul>
+    <div class="loader-box">
+        <div id="canvasloader-container" class="loader-logo"></div>
+    </div>
     <a class="thenew-logo logo-100" href="<?php echo site_url('/'); ?>">
         <div class="t demi"></div>
         <div class="n demi"></div>
