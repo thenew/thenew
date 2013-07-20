@@ -20,7 +20,7 @@ code {
 
 .fon_debug_toolbar {
     z-index: 10;
-    position: fixed; /*or maybe fixed*/
+    position: relative; /*or maybe fixed*/
     right: 0;
     bottom: 0;
     left: 0;

@@ -1,7 +1,4 @@
     </div>
-    <footer>
-      <?php wp_footer(); ?>
-    </footer>
     <div class="js-ajax-loader">Loading</div>
   </div>
 

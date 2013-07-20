@@ -52,24 +52,26 @@ window.addEvent('domready',function(){
                         jaxNavEnabled = false;
                         document.body.addClass('js-ajax-loading');
 
+                        jaxContent0.addClass('js-ajax-content-0');
+
+                        // Main col
+                        jaxMainCol0.addClass('js-stack-0');
+
+                        // Thumb
+                        if(jaxThumb0)
+                            jaxThumb0.morph({'opacity': 0});
+
+
                         // Scroll
-                        isFxScroll = true;
+/*                        isFxScroll = true;
                         new Fx.Scroll(window, {
                             duration: 400,
                             transition: Fx.Transitions.Sine.easeOut,
                             onComplete: function(){
-                                jaxContent0.addClass('js-ajax-content-0');
-
-                                // Main col
-                                jaxMainCol0.addClass('js-stack-0');
-
-                                // Thumb
-                                if(jaxThumb0)
-                                    jaxThumb0.morph({'opacity': 0});
 
                                 isFxScroll = false;
                             }
-                        }).toTop();
+                        }).toTop();*/
                     },
                     onFailure: function(xhr){
                         document.body.removeClass('js-ajax-loading');
@@ -78,18 +80,24 @@ window.addEvent('domready',function(){
                     onSuccess: function(response){
                         if(!response) return;
 
-                        var waitScrollOverPeriodical = (function() {
-                            if(!isFxScroll) {
-                                $clear(waitScrollOverPeriodical);
+                        // var waitScrollOverPeriodical = (function() {
+                        //     if(!isFxScroll) {
+                        //         $clear(waitScrollOverPeriodical);
 
                                 var isHome = false,
                                     titlePage = 'thenew';
+                                console.log(Elements.from(response));
+                                // console.log(response);
                                 Elements.from(response).each(function(tag) {
+
+                                    // get the title
                                     if(tag.get('tag') == 'title') {
                                         titlePage = tag.get('html');
                                     }
-                                    if(tag.getElements('.js-ajax-content').length) {
-                                        gogo(tag);
+
+                                    // get the template
+                                    if(tag.get('tag') == 'div' && tag.getElements('.js-ajax-content').length) {
+                                        theAjaxAnim(tag);
                                     }
 
                                     // if home inject block home
@@ -131,8 +139,8 @@ window.addEvent('domready',function(){
 
 
                                 }
-                            }
-                        }).periodical(100);
+                        //     }
+                        // }).periodical(100);
 
 
                     }
@@ -144,7 +152,7 @@ window.addEvent('domready',function(){
     fonJaxNav();
 
 
-    function gogo(tag) {
+    function theAjaxAnim(tag) {
         var jaxContent0 = $$('.js-ajax-content')[0],
             mainCol = $$('.main-col')[0],
             mainColPush = $$('.main-col-push')[0],
@@ -168,7 +176,7 @@ window.addEvent('domready',function(){
             jaxThumb1.morph({'opacity': 1});
         }
 
-        // morph layout
+        // morph layout (push margin top)
         mainColPush.set('morph', {
             'duration': 400,
             onComplete: function() {
@@ -179,21 +187,40 @@ window.addEvent('domready',function(){
                     jaxMainCol1.addClass('js-stack-1');
                 jaxMainCol1.inject(jaxMainCol0, 'after');
 
+
                 setTimeout(function() {
-                    jaxMainCol0.destroy();
-                    jaxMainCol1.removeClass('js-stack-1');
-                    if(jaxThumb0)
-                        jaxThumb0.destroy();
-                    document.body.removeClass('js-ajax-loading');
+                    var waitScrollOverPeriodical = (function() {
+                        if(!isFxScroll) {
+                            $clear(waitScrollOverPeriodical);
+
+                            jaxMainCol0.destroy();
+                            jaxMainCol1.removeClass('js-stack-1');
+                            if(jaxThumb0)
+                                jaxThumb0.destroy();
+                            document.body.removeClass('js-ajax-loading');
+                        }
+                    }).periodical(100);
                 }, 500);
 
                 fonJaxNav();
                 jaxNavEnabled = true;
+
             }
         });
 
         var layoutPos = (jaxContent1.hasClass('single-layout')) ? 120 : 0;
         mainColPush.morph({'height': layoutPos});
+
+        // Scroll to top
+        isFxScroll = true;
+        new Fx.Scroll(window, {
+            duration: 400,
+            transition: Fx.Transitions.Sine.easeOut,
+            onComplete: function(){
+                isFxScroll = false;
+            }
+        }).toTop();
+
     }
 
 
