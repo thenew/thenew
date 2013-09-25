@@ -110,14 +110,20 @@ body {
    Index
    ------------------------------------------------------- */
 
-.home {
+.front-page-block {
+    text-align: center;
+    position: relative;
+}
+
+.front-page-block .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -400px;
+    left: 0;
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.front-page-block {
-    text-align: center;
 }
 
 .front-page-block .wrapper {

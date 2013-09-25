@@ -22,7 +22,7 @@ $baseline_page = get_page_by_path('baseline');
 $header_img = fon_get_thumb_url('full', $baseline_page->ID);
 ?>
 
-<body <?php body_class(); ?> style="<?php if(is_front_page()) { echo 'background-image: url('.$header_img.');'; } ?>">
+<body <?php body_class(); ?>>
 <div id="top"></div>
     <?php include TEMPLATE_PATH . '/tpl/front_page.php'; ?>
     <div class="main">

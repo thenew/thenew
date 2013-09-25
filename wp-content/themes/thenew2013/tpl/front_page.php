@@ -3,6 +3,7 @@
 if(is_front_page()) {
     ?>
     <div class="front-page-block">
+        <div class="bg" style="background-image: url(<?php echo $header_img; ?>);"></div>
         <div class="wrapper">
             <?php
             $baseline_page = get_page_by_path('baseline');
