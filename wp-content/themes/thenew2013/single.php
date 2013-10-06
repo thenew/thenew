@@ -35,6 +35,24 @@ endif;
                         <?php the_content(); ?>
                     </div>
                 </div>
+                <?php
+                $work_url = get_post_meta( get_the_ID(), 'fon_url', 1 );
+                $work_github_url = get_post_meta( get_the_ID(), 'fon_github_url', 1 );
+                if(!empty($work_url)):
+                    ?>
+                    <div class="cf post-metas">
+                        <span class="border">/</span>
+                        <span class="metas"><a target="_blank" href="<?php echo $work_url; ?>"><?php echo untrailingslashit(preg_replace('#^https?://#', '', $work_url)); ?></a></span>
+                    </div>
+                    <?php
+                endif;
+                if(!empty($work_github_url)):
+                    ?>
+                    <div class="cf post-metas">
+                        <span class="border">/</span>
+                        <span class="metas"><a target="_blank" href="<?php echo $work_github_url; ?>"><?php echo untrailingslashit(preg_replace('#^https?://#', '', $work_github_url)); ?></a></span>
+                    </div>
+                <?php endif; ?>
                 <div class="cf post-metas">
                     <span class="border">/</span>
                     <span class="metas">

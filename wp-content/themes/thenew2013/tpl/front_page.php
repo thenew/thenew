@@ -1,6 +1,6 @@
 <?php
 // If front page
-if(is_front_page()) {
+if(is_front_page() && $paged === 0) {
     ?>
     <div class="front-page-block">
         <div class="bg" style="background-image: url(<?php echo $header_img; ?>);"></div>

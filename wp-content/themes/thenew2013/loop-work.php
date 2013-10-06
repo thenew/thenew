@@ -18,8 +18,8 @@
         <h2 class="work-title">
             <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
         </h2>
-        <div class="work-content">
+<!--         <div class="work-content">
             <?php the_excerpt(); ?>
-        </div>
+        </div> -->
     </div>
 </li>

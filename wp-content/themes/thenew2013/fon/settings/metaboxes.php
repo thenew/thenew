@@ -30,5 +30,22 @@ $fon_meta_boxes[] = array(
     )
 );
 
+$fon_meta_boxes[] = array(
+    'title' => 'Détails',
+    'pages' => array( 'work' ),
+    'fields' => array(
+        array(
+            'name'  => 'URL du projet',
+            'id'    => "{$prefix}url",
+            'type'  => 'url',
+        ),
+        array(
+            'name' => 'URL Github',
+            'id'   => "{$prefix}github_url",
+            'type' => 'url'
+        )
+    )
+);
+
 
 

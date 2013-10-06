@@ -140,6 +140,7 @@ function wAjaxLoad(ajaxUrl) {
 
                 // if home inject block home
                 if(tag.hasClass('front-page-block')) {
+                    document.body.addClass('home');
                     isHome = true;
                     tag.setStyles({
                         'max-height': 0,
@@ -166,6 +167,7 @@ function wAjaxLoad(ajaxUrl) {
 
             // Virer block home
             if(!isHome && $$('.front-page-block').length) {
+                document.body.removeClass('home');
                 var blockHome = $$('.front-page-block')[0];
 
                 blockHome.set('morph', {

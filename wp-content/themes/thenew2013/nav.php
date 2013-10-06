@@ -1,6 +1,6 @@
 <nav id="sidenav" class="sidenav">
     <ul id="menu" class="cf menu">
-        <li>
+        <li class="blog-item">
             <div class="mask">
                 <div class="dot"></div>
                 <a class="blog-link" href="<?php echo site_url( '/blog' ); ?>">Blog</a>

@@ -271,9 +271,6 @@ body {
     box-shadow: 0 0 0 7px rgba(114,88,161,.1), 0 0 1px 1px rgba(114,88,161,.5), 0 0 6px 2px rgba(114,88,161,.5);
     border-radius: 50%;
     opacity: 0;
-    -webkit-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
-    -moz-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
-    -o-transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
     transition: opacity .4s cubic-bezier(.8,.4,.4,.4) .3s;
 }
 
@@ -307,10 +304,16 @@ body {
 
 .sidenav .menu.fx-closed .fx-over .mask .dot {
     opacity: 0;
-    -webkit-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
-    -moz-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
-    -o-transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
     transition: opacity .2s cubic-bezier(.8,.4,.4,.4) 0;
+}
+
+.sidenav .menu .blog-item {
+    opacity: .9999;
+    transition: opacity .2s cubic-bezier(.8,.4,.4,.4);
+}
+
+.home .sidenav .menu .blog-item {
+    opacity: 0;
 }
 
 /* ----------------------------------------------------------
@@ -462,7 +465,8 @@ body {
 .single-thumb .bg {
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
+    background-size: 1040px auto;
     background-attachment: fixed;
 }
 
