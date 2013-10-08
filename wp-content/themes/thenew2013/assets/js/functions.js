@@ -61,7 +61,6 @@ function logoLoader() {
 
 function wInit() {
     wParallax($$('.parallax, .home'));
-    logoLoader();
     wAjaxNav();
 }
 

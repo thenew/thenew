@@ -24,5 +24,5 @@ window.addEvent('domready',function(){
     });
 
     wInit();
-
+    logoLoader();
 });
