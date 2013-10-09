@@ -6,6 +6,10 @@
         <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'loop-short' ); ?></a>
     </div>
     <div class="post-content">
-        <?php the_excerpt(); ?>
+        <?php
+        global $more;
+        $more = 0;
+        the_content('Lire la suite');
+        ?>
     </div>
 </li>
