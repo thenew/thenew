@@ -92,8 +92,9 @@ $meta_boxes[] = array(
 				'value2' => __( 'Label2', 'rwmb' ),
 			),
 			// Select multiple values, optional. Default is false.
-			'multiple' => false,
-			'std'	=> __( 'Select an Item', 'rwmb' ),
+			'multiple'    => false,
+			'std'         => 'value2',
+			'placeholder' => __( 'Select an Item', 'rwmb' ),
 		),
 		// HIDDEN
 		array(
@@ -267,6 +268,21 @@ $meta_boxes[] = array(
 			'desc'  => __( 'oEmbed description', 'rwmb' ),
 			'type'  => 'oembed',
 		),
+		// SELECT ADVANCED BOX
+		array(
+			'name'     => __( 'Select', 'rwmb' ),
+			'id'       => "{$prefix}select_advanced",
+			'type'     => 'select_advanced',
+			// Array of 'value' => 'Label' pairs for select box
+			'options'  => array(
+				'value1' => __( 'Label1', 'rwmb' ),
+				'value2' => __( 'Label2', 'rwmb' ),
+			),
+			// Select multiple values, optional. Default is false.
+			'multiple'    => false,
+			// 'std'         => 'value2', // Default value, optional
+			'placeholder' => __( 'Select an Item', 'rwmb' ),
+		),
 		// TAXONOMY
 		array(
 			'name'    => __( 'Taxonomy', 'rwmb' ),
@@ -275,8 +291,8 @@ $meta_boxes[] = array(
 			'options' => array(
 				// Taxonomy name
 				'taxonomy' => 'category',
-				// How to show taxonomy: 'checkbox_list' (default) or 'checkbox_tree', 'select_tree' or 'select'. Optional
-				'type' => 'select_tree',
+				// How to show taxonomy: 'checkbox_list' (default) or 'checkbox_tree', 'select_tree', select_advanced or 'select'. Optional
+				'type' => 'checkbox_list',
 				// Additional arguments for get_terms() function. Optional
 				'args' => array()
 			),
