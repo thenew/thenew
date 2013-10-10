@@ -1,12 +1,13 @@
 <?php
 // If front page
 if(is_front_page() && $paged === 0) {
+    $baseline_page = get_page_by_path('baseline');
+    $header_img = fon_get_thumb_url('full', $baseline_page->ID);
     ?>
     <div class="front-page-block">
         <div class="bg" style="background-image: url(<?php echo $header_img; ?>);"></div>
         <div class="wrapper">
             <?php
-            $baseline_page = get_page_by_path('baseline');
             $baseline_args = array(
                 'page_id'        => $baseline_page->ID,
                 'posts_per_page' => 1

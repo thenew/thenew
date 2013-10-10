@@ -17,11 +17,6 @@
     <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 </head>
 
-<?php
-$baseline_page = get_page_by_path('baseline');
-$header_img = fon_get_thumb_url('full', $baseline_page->ID);
-?>
-
 <body <?php body_class(); ?>>
 <div id="top"></div>
     <?php include TEMPLATE_PATH . '/tpl/front_page.php'; ?>
