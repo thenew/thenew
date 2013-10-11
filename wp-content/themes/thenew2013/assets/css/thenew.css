@@ -178,8 +178,18 @@ body {
     padding: 0 40px 40px 20px;
     text-align: right;
     vertical-align: top;
+    transition: background-color .3s cubic-bezier(.8,.4,.4,.4);
+}
+
+.sidenav,
+.sidenav:hover,
+.sidenav.js-focus-mode:hover {
     background-color: #efefef;
     background-color: rgba(239, 239, 239, .95);
+}
+
+.sidenav.js-focus-mode {
+    background-color: rgba(239, 239, 239, 0);
 }
 
 .sidenav .thenew-logo {

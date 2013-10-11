@@ -63,6 +63,15 @@
     margin-left: -200px;
 }
 
+.blabla .alignleft + .alignleft {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.blabla .alignleft + .alignleft + .alignleft {
+    margin-left: 50px;
+}
+
 .blabla .alignright {
     float: right;
     margin-left: 20px;
