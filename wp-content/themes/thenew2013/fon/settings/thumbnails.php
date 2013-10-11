@@ -20,12 +20,13 @@ function fon_thumbnail_sizes() {
     global $fon_thumbnail_sizes;
     foreach ($fon_thumbnail_sizes as $thumb) {
         // if post type
-        if(!isset($thumb[4])) {
+        // if(isset($thumb[4])) {
+        // } else {
             add_image_size( $thumb[0], $thumb[1], $thumb[2], $thumb[3] );
-        }
+        // }
     }
 }
-fon_thumbnail_sizes();
+add_action( 'init', 'fon_thumbnail_sizes' );
 
 function fon_gallery_upload($metadata, $attachment_id) {
     $post_id = $_POST['post_id'];
