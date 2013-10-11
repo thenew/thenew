@@ -10,7 +10,7 @@ function remove_menus () {
 	global $submenu;
 
    // delete dashboard menu (Tableau de bord)
-   unset($menu[2]);
+   // unset($menu[2]);
 
 	// delete comments menu
    if(!FONDATIONS_COMMENTS)
