@@ -8,5 +8,5 @@ define('FON_JPEG_QUALITY', 98);
 
 // Profile
 
-define('FON_TWITTER_SITE', '@thenew');
-define('FON_TWITTER_CREATOR', '@thenew');
+define('FON_TWITTER_SITE', '@remybarthez');
+define('FON_TWITTER_CREATOR', '@remybarthez');
