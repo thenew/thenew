@@ -9,7 +9,7 @@ if(!empty($custom_font))
     echo "\n".'<link href="http://fonts.googleapis.com/css?family='.$custom_font.'" rel="stylesheet" type="text/css">'."\n";
 
 if(!empty($custom_font) || !empty($custom_color)):
-    echo '<style>.blabla .post-title {';
+    echo '<style>.blabla .post-title, .blabla h1, .blabla h2 {';
     if(!empty($custom_font)) echo 'font-family: "'.$custom_font.'";';
     if(!empty($custom_color)) echo 'color: '.$custom_color.';';
     echo '}';
