@@ -5,8 +5,8 @@
  * Ce fichier contient les réglages de configuration suivants : réglages MySQL,
  * préfixe de table, clefs secrètes, langue utilisée, et ABSPATH.
  * Vous pouvez en savoir plus à leur sujet en allant sur 
- * {@link http://codex.wordpress.org/Editing_wp-config.php Modifier
- * wp-config.php} (en anglais). C'est votre hébergeur qui doit vous donner vos
+ * {@link http://codex.wordpress.org/fr:Modifier_wp-config.php Modifier
+ * wp-config.php}. C'est votre hébergeur qui doit vous donner vos
  * codes MySQL.
  *
  * Ce fichier est utilisé par le script de création de wp-config.php pendant
@@ -67,16 +67,6 @@ define('NONCE_SALT',       'put your unique phrase here');
  * N'utilisez que des chiffres, des lettres non-accentuées, et des caractères soulignés!
  */
 $table_prefix  = 'wp_';
-
-/**
- * Langue de localisation de WordPress, par défaut en Anglais.
- *
- * Modifiez cette valeur pour localiser WordPress. Un fichier MO correspondant
- * au langage choisi doit être installé dans le dossier wp-content/languages.
- * Par exemple, pour mettre en place une traduction française, mettez le fichier
- * fr_FR.mo dans wp-content/languages, et réglez l'option ci-dessous à "fr_FR".
- */
-define('WPLANG', 'fr_FR');
 
 /** 
  * Pour les développeurs : le mode deboguage de WordPress.
