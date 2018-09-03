@@ -1,0 +1,9 @@
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-123.000000, 49.000000)" stroke="#6a737c" stroke-width="80">
+            <path d="M249,278 C249,346.483309 304.740549,402 373.5,402 C442.259451,402 498,346.483309 498,278" id="Combined-Shape"></path>
+            <path d="M498,157.814356 C498,226.400193 553.740549,282 622.5,282 C691.259451,282 747,226.400193 747,157.814356 L747,-3.97903932e-12" id="Combined-Shape-Copy" transform="translate(622.500000, 141.000000) rotate(-180.000000) translate(-622.500000, -141.000000) "></path>
+            <path d="M0,157.814356 C0,226.400193 55.7405486,282 124.5,282 C193.259451,282 249,226.400193 249,157.814356 L249,-3.97903932e-12" id="Combined-Shape-Copy-2" transform="translate(124.500000, 141.000000) scale(-1, 1) rotate(-180.000000) translate(-124.500000, -141.000000) "></path>
+        </g>
+    </g>
+</svg>
