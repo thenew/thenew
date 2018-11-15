@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="l" transform="translate(3.000000, 2.000000)" fill="#7A7A7A">
-            <g id="Group">
-                <rect id="Rectangle" transform="translate(26.870058, 167.870058) rotate(-315.000000) translate(-26.870058, -167.870058) " x="7.87005769" y="148.870058" width="38" height="38"></rect>
-                <rect id="Rectangle-Copy" transform="translate(120.870058, 73.870058) rotate(-315.000000) translate(-120.870058, -73.870058) " x="101.870058" y="54.8700577" width="38" height="38"></rect>
-                <rect id="Rectangle-Copy-2" transform="translate(73.870058, 120.870058) rotate(-315.000000) translate(-73.870058, -120.870058) " x="54.8700577" y="101.870058" width="38" height="38"></rect>
-                <rect id="Rectangle-Copy-4" transform="translate(166.870058, 26.870058) rotate(-315.000000) translate(-166.870058, -26.870058) " x="147.870058" y="7.87005769" width="38" height="38"></rect>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Group">
+        <path id="Rectangle" d="M28.276,84.667L14.823,71.214L1.37,84.667L14.823,98.12L28.276,84.667Z" style="fill:#7a7a7a;"/>
+        <path id="Rectangle-Copy" d="M75.339,37.604L61.886,24.151L48.433,37.604L61.886,51.057L75.339,37.604Z" style="fill:#7a7a7a;"/>
+        <path id="Rectangle-Copy-2" d="M51.808,61.136L38.355,47.683L24.902,61.136L38.355,74.589L51.808,61.136Z" style="fill:#7a7a7a;"/>
+        <path id="Rectangle-Copy-4" d="M98.37,14.073L84.917,0.62L71.464,14.073L84.917,27.526L98.37,14.073Z" style="fill:#7a7a7a;"/>
     </g>
 </svg>
