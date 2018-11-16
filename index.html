@@ -1,230 +1,236 @@
 <html>
-    <title>thenew</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="thenew web developer">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@remybarthez">
-    <meta name="twitter:creator" content="@remybarthez">
-    <meta name="twitter:title" content="thenew">
-    <meta name="twitter:description" content="thenew web developer">
-    <meta property="og:title" content="thenew">
-    <meta property="og:description" content="thenew web developer">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="thenew">
-    <meta property="og:url" content="http://thenew.fr">
-    <link rel="icon" sizes="256x256" href="icon-256.png">
-    <link rel="logo" type="image/png" href="icon-256.png"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent">
-    <meta name="msapplication-TileColor" content="#633487">
-    <meta name="theme-color" content="#633487">
-    <style>
-*,*:before,*:after{box-sizing:border-box}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,acronym,address,code,em,img,footer,header,small,strike,strong,sub,sup,ol,ul,li,canvas,menu,nav,section,video,abbr,time,progress{margin:0;padding:0;border:0;font:inherit;font-size:100%;font-weight:inherit;vertical-align:baseline;outline:0;background:transparent no-repeat top left}ol,ul{padding:0;list-style:none}a{text-decoration:none}html{min-height:100%}body{position:relative;min-height:100%;font-family:sans-serif;font-size:62.5%;line-height:1.4;color:#222;background-color:#fff;-webkit-text-size-adjust:none}strong{font-weight:700}svg{display:inline-block;max-height:100%;max-width:100%}svg line,svg use,svg path{fill:currentColor}img,video{max-width:100%}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}a{text-decoration:none;color:inherit;}
-    body {
-        position: relative;
-        width: 100%;
-        min-height: 100%;
-        overflow-x: hidden;
-        color: #08171A;
-        background-color: #F7F9FA;
-    }
+<title>thenew</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="thenew web developer">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@remybarthez">
+<meta name="twitter:creator" content="@remybarthez">
+<meta name="twitter:title" content="thenew">
+<meta name="twitter:description" content="thenew web developer">
+<meta property="og:title" content="thenew">
+<meta property="og:description" content="thenew web developer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="thenew">
+<meta property="og:url" content="http://thenew.fr">
+<link rel="icon" sizes="256x256" href="assets/app-icons/icon-256.png">
+<link rel="logo" type="image/png" href="assets/app-icons/icon-256.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content=" black-translucent">
+<meta name="msapplication-TileColor" content="#848D95">
+<meta name="theme-color" content="#848D95">
+<style>
+  *,*:before,*:after{box-sizing:border-box}html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,acronym,address,code,em,img,footer,header,small,strike,strong,sub,sup,ol,ul,li,canvas,menu,nav,section,video,abbr,time,progress{margin:0;padding:0;border:0;font:inherit;font-size:100%;font-weight:inherit;vertical-align:baseline;outline:0;background:transparent no-repeat top left}ol,ul{padding:0;list-style:none}a{text-decoration:none}html{min-height:100%}body{position:relative;min-height:100%;font-family:sans-serif;font-size:62.5%;line-height:1.4;color:#222;background-color:#fff;-webkit-text-size-adjust:none}strong{font-weight:700}svg{display:inline-block;max-height:100%;max-width:100%}svg line,svg use,svg path{fill:currentColor}img,video{max-width:100%}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}a{text-decoration:none;color:inherit;}
+  body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    color: #08171A;
+    background-color: #F7F9FA;
+  }
+  .background,
+  .mask,
+  .page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  @media (min-width: 768px) {
     .background,
     .mask,
     .page {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        min-height: 100vh;
+      min-height: 100vh;
     }
+  }
+  .page {
+    background-color: #08171A;
+    clip-path: inset(50vw);
+    transition: clip-path .25s ease-in-out, background 1.4s ease-in-out .4s;
+  }
+  .js-load .page {
+    clip-path: inset(10px);
+  }
+  @media (min-width: 768px) {
     .page {
-        background-color: #08171A;
-        clip-path: inset(50vw);
-        transition: clip-path .2s ease-out, background 1.4s ease-in-out .4s;
+      z-index: 4;
     }
     .js-load .page {
-        clip-path: inset(10px);
+      clip-path: inset(20px);
     }
-    @media (min-width: 768px) {
-        .page {
-            z-index: 4;
-        }
-        .js-load .page {
-            clip-path: inset(20px);
-        }
-    }
+  }
+  .background {
+    background: url(assets/pattern.svg) repeat center center transparent;
+    background-size: .04%;
+    clip-path: inset(0 0 0 50%);
+    transition: clip-path 1s ease-in-out 0s, background-size 60s linear;
+  }
+  .js-load .page .background {
+    background-size: 1.3%;
+  }
+  @media (min-width: 768px) {
     .background {
-        background: url(assets/pattern.svg) repeat center center transparent;
-        background-size: .04%;
-        /* clip-path: inset(0); */
-        clip-path: inset(0 0 0 50%);
-        transition: clip-path 1s ease-in-out 0s, background-size 60s linear;
+      z-index: 4;
     }
-    .js-load .page .background {
-        /* clip-path: inset(0 0 0 50%); */
-        background-size: 1.3%;
-    }
-    @media (min-width: 768px) {
-        .background {
-            z-index: 4;
-        }
-    }
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 75%;
-        transform: translate(-50%, -50%);
-        width: 20vw;
-        color: #7258A1;
-        opacity: .02;
-        transition: 60s opacity linear;
-    }
-    .js-load .logo {
-        opacity: .3;
-    }
+  }
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    color: #7258A1;
+    opacity: .02;
+    transition: 60s opacity linear;
+  }
+  .js-load .logo {
+    opacity: .3;
+  }
+  .waves {
+    width: 60%;
+    height: 20%;
+    background: url(assets/waves.svg) repeat left .2% transparent;
+    background-color: #848D95;
+    background-size: 4%;
+    transition: 60s background linear;
+  }
+  .js-load .waves {
+    background-position: -100% 10%;
+  }
+  @media (min-width: 768px) {
     .waves {
-        width: 60%;
-        height: 20%;
-        background: url(assets/waves.svg) repeat left .2% transparent;
-        background-color: #848D95;
-        background-size: 4%;
-        transition: 60s background linear;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      background-size: 1.6%;
     }
-    .js-load .waves {
-        background-position: -100% 10%;
-    }
-    @media (min-width: 768px) {
-        .waves {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            background-size: 1.6%;
-        }
-    }
+  }
+  .content {
+    padding: 30px 20px 50px 20px;
+    background-color: #BCC1C4;
+  }
+  @media (min-width: 768px) {
     .content {
-        padding: 30px 20px 50px 20px;
-        background-color: #BCC1C4;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
     }
-    @media (min-width: 768px) {
-        .content {
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0;
-        }
-    }
+  }
+  .wordmark,
+  .text,
+  .links {
+    left: 10%;
+  }
+  .wordmark {
+    margin-bottom: 4vh;
+    position: relative;
+    width: 50%;
+  }
+  .text {
+    position: relative;
+    width: 60%;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 4vh;
+  }
+  .links {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+  .link {
+    display: block;
+    border: 2px solid #08171A;
+    padding: 0 15px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 2.2;
+    filter: blur(.4px);
+    transition: .2s background linear, .2s color linear;
+  }
+  .link + .link {
+    position: relative;
+    left: -2px;
+  }
+  .link:hover {
+    color: #BCC1C4;
+    background: url(assets/pattern4.svg) repeat;
+    background-color: #08171A;
+    background-size: 40%;
+  }
+  @media (min-width: 768px) {
     .wordmark,
     .text,
     .links {
-        left: 15%;
+      left: 30%;
     }
     .wordmark {
-        margin-bottom: 4vh;
-        position: relative;
-        width: 50%;
+      width: 30%;
     }
     .text {
-        position: relative;
-        width: 50%;
-        font-size: 1.1rem;
-        line-height: 1.3;
-        margin-bottom: 4vh;
-    }
-    .links {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
+      width: 50%;
     }
     .link {
-        display: block;
-        border: 2px solid #08171A;
-        padding: 0 15px;
-        font-family: monospace;
-        font-size: 1.1rem;
-        line-height: 2.2;
-        text-transform: uppercase;
-        filter: blur(0.4px);
-        transition: .2s background linear, .2s color linear;
+      line-height: 1.4;
+      padding: 0 10px;
     }
-    .link + .link {
-        position: relative;
-        left: -2px;
-    }
-    .link:hover {
-        color: #BCC1C4;
-        background: url(assets/pattern4.svg) repeat;
-        background-color: #08171A;
-        background-size: 40%;
-    }
-    @media (min-width: 768px) {
-        .wordmark,
-        .text,
-        .links {
-            left: 30%;
-        }
-        .wordmark {
-            width: 30%;
-        }
-        .link {
-            line-height: 1.4;
-            padding: 0 10px;
-        }
-    }
-    </style>
+  }
+</style>
 <body>
-    <div class="page">
-        <svg class="logo" viewBox="0 0 100 100">
-            <path class="circle" d="M96.068,30.536c-2.518-5.955-6.123-11.301-10.713-15.892c-4.591-4.59-9.938-8.195-15.892-10.713
-                C63.297,1.323,56.748,0,50,0S36.703,1.323,30.536,3.931c-5.955,2.518-11.301,6.123-15.892,10.713
-                c-4.591,4.591-8.195,9.937-10.714,15.892C1.322,36.704,0,43.252,0,50c0,6.748,1.322,13.296,3.931,19.463
-                c2.519,5.954,6.123,11.301,10.714,15.892c4.59,4.591,9.937,8.195,15.892,10.714C36.703,98.677,43.252,100,50,100
-                s13.297-1.323,19.464-3.932c5.954-2.519,11.301-6.123,15.892-10.714c4.59-4.591,8.195-9.938,10.713-15.892
-                C98.678,63.296,100,56.748,100,50C100,43.252,98.678,36.704,96.068,30.536z M50,91.139C27.315,91.139,8.861,72.684,8.861,50
-                S27.315,8.861,50,8.861S91.14,27.316,91.14,50S72.685,91.139,50,91.139z"/>
-            <path class="t" d="M50,59.241H31.773c-2.539,0-4.685-2.143-4.685-4.682l0-2.275c0-0.212,0-0.598,0-2.41h10.379c2.447,0,4.43-1.984,4.43-4.431
-                s-1.983-4.43-4.43-4.43H27.091c0-1.38,0-2.933,0-4.683c0-2.447-1.983-4.431-4.43-4.431c0,0,0,0,0,0c-2.446,0-4.43,1.983-4.431,4.43
-                c-0.002,14.252-0.003,15.499-0.003,15.951v2.28c0,3.625,1.433,7.035,4.035,9.606c2.57,2.539,5.947,3.936,9.511,3.936H50
-                c2.447,0,4.431-1.983,4.431-4.43C54.431,61.224,52.447,59.241,50,59.241z"/>
-            <path class="n" d="M68.227,31.898H50c-2.447,0-4.431,1.984-4.431,4.431s1.984,4.43,4.431,4.43h18.227c2.539,0,4.685,2.145,4.685,4.685v2.275
-                c0,0.453-0.001,1.697-0.003,15.954c0,2.446,1.983,4.429,4.43,4.429c0,0,0,0,0.001,0c2.446,0,4.43-1.981,4.431-4.429
-                c0.002-14.252,0.003-15.496,0.003-15.949v-2.28c0-3.625-1.434-7.037-4.035-9.607C75.168,33.297,71.79,31.898,68.227,31.898z"/>
-        </svg>
-        <div class="background"></div>
-        <div class="waves"></div>
-        <div class="content">
-            <svg class="wordmark" viewBox="0 0 617 148" version="1.1">
-                <path d="M42.3410389,61.0725585 L61.8530385,61.0725585 L61.8530385,83.9015979 L42.3410389,83.9015979 L42.3410389,145.169276 L17.5607996,145.169276 L17.5607996,83.9015979 L0,83.9015979 L0,61.0725585 L17.5607996,61.0725585 L17.5607996,29.8533593 L42.3410389,29.8533593 L42.3410389,61.0725585 Z M103.023357,0 L103.023357,66.3407983 C110.242797,61.4627985 118.828077,58.5359985 128.193837,58.5359985 C152.778956,58.5359985 172.681196,78.633358 172.681196,103.218477 L172.681196,145.169276 L146.925356,145.169276 L146.925356,103.218477 C146.925356,97.1697576 144.583916,91.5112777 140.486396,87.0235178 C136.388877,82.7308779 130.925517,80.389438 125.071917,80.389438 C119.218317,80.389438 113.559837,82.7308779 109.462317,87.0235178 C105.364797,91.5112777 103.023357,97.1697576 103.023357,103.218477 L103.023357,145.169276 L77.0723981,145.169276 L77.0723981,0 L103.023357,0 Z M229.070874,147.510716 C204.485755,147.510716 184.388395,127.413357 184.388395,102.828237 C184.388395,78.047998 204.485755,58.1457585 229.070874,58.1457585 C253.655994,58.1457585 273.753353,78.047998 273.753353,102.828237 C273.753353,105.559917 273.558233,108.096477 272.972873,110.828157 L210.144235,110.828157 C211.314955,113.950077 212.875915,116.681757 215.022235,119.023197 C218.88261,123.251227 223.784899,125.574185 229.070874,125.828907 L229.070874,147.510716 Z M209.753995,95.9990376 L250.143834,95.9990376 C249.168234,92.4868777 247.412154,89.1698378 244.875594,86.4381578 C240.973194,82.1455179 235.509834,79.804078 230.046474,79.804078 C224.387994,79.804078 219.119755,82.1455179 215.022235,86.4381578 C212.680795,89.1698378 210.924715,92.4868777 209.753995,95.9990376 Z M329.877599,59 C352.809406,59 373.974718,78.9022395 373.974718,103.682479 L373.974718,145.438158 L350.170078,145.438158 L350.170078,103.682479 C350.170078,91.5850392 341.584799,80.8534395 329.877599,80.8534395 C318.170399,80.8534395 309.585119,91.5850392 309.585119,103.682479 L309.585119,145.438158 L285,145.438158 L285,103.682479 C285,79.1692764 306.945792,59 329.877599,59 Z M448.190629,119.608557 L466.531908,131.901117 C458.531989,141.461996 446.239429,147.510716 432.776149,147.510716 C408.19103,147.510716 388.09367,127.413357 388.09367,102.828237 C388.09367,78.047998 408.19103,58.1457585 432.776149,58.1457585 C457.361269,58.1457585 477.458628,78.047998 477.458628,102.828237 C477.458628,105.559917 477.263508,108.096477 476.678148,110.828157 L413.84951,110.828157 C415.02023,113.950077 416.58119,116.681757 418.72751,119.023197 C422.825029,123.510957 428.093269,125.852397 433.751749,125.852397 C439.019989,125.852397 444.288229,123.510957 448.190629,119.608557 Z M413.45927,95.9990376 L453.849109,95.9990376 C452.873509,92.4868777 451.117429,89.1698378 448.580869,86.4381578 C444.678469,82.1455179 439.215109,79.804078 433.751749,79.804078 C428.093269,79.804078 422.825029,82.1455179 418.72751,86.4381578 C416.38607,89.1698378 414.62999,92.4868777 413.45927,95.9990376 Z M592.798865,61.0725585 L616.993744,61.0725585 L573.286865,145.169276 L569.969826,145.169276 L550.067586,107.315997 L530.360467,145.169276 L527.238547,145.169276 L483.141428,61.0725585 L507.336307,61.0725585 L528.799507,101.852637 L537.970146,84.2918379 L525.872707,61.0725585 L550.067586,61.0725585 L571.530786,101.852637 L592.798865,61.0725585 Z" id="thenew-copy-2" fill="#08171A"></path>
-            </svg>
-            <p class="text">I developed e-commerce websites for numerous clients during 7 years and Iʼm currently working to bring an industry-leading design system to adidas.</p>
-            <div class="links">
-                <a class="link" target="_blank" href="http://iam.thenew.fr">i am</a>
-                <a class="link" target="_blank" href="http://madeby.thenew.fr">i made</a>
-            </div>
-        </div>
+  <div class="page">
+    <svg class="logo" viewBox="0 0 100 100">
+      <path class="circle" d="M96.068,30.536c-2.518-5.955-6.123-11.301-10.713-15.892c-4.591-4.59-9.938-8.195-15.892-10.713
+      C63.297,1.323,56.748,0,50,0S36.703,1.323,30.536,3.931c-5.955,2.518-11.301,6.123-15.892,10.713
+      c-4.591,4.591-8.195,9.937-10.714,15.892C1.322,36.704,0,43.252,0,50c0,6.748,1.322,13.296,3.931,19.463
+      c2.519,5.954,6.123,11.301,10.714,15.892c4.59,4.591,9.937,8.195,15.892,10.714C36.703,98.677,43.252,100,50,100
+      s13.297-1.323,19.464-3.932c5.954-2.519,11.301-6.123,15.892-10.714c4.59-4.591,8.195-9.938,10.713-15.892
+      C98.678,63.296,100,56.748,100,50C100,43.252,98.678,36.704,96.068,30.536z M50,91.139C27.315,91.139,8.861,72.684,8.861,50
+      S27.315,8.861,50,8.861S91.14,27.316,91.14,50S72.685,91.139,50,91.139z"/>
+      <path class="t" d="M50,59.241H31.773c-2.539,0-4.685-2.143-4.685-4.682l0-2.275c0-0.212,0-0.598,0-2.41h10.379c2.447,0,4.43-1.984,4.43-4.431
+      s-1.983-4.43-4.43-4.43H27.091c0-1.38,0-2.933,0-4.683c0-2.447-1.983-4.431-4.43-4.431c0,0,0,0,0,0c-2.446,0-4.43,1.983-4.431,4.43
+      c-0.002,14.252-0.003,15.499-0.003,15.951v2.28c0,3.625,1.433,7.035,4.035,9.606c2.57,2.539,5.947,3.936,9.511,3.936H50
+      c2.447,0,4.431-1.983,4.431-4.43C54.431,61.224,52.447,59.241,50,59.241z"/>
+      <path class="n" d="M68.227,31.898H50c-2.447,0-4.431,1.984-4.431,4.431s1.984,4.43,4.431,4.43h18.227c2.539,0,4.685,2.145,4.685,4.685v2.275
+      c0,0.453-0.001,1.697-0.003,15.954c0,2.446,1.983,4.429,4.43,4.429c0,0,0,0,0.001,0c2.446,0,4.43-1.981,4.431-4.429
+      c0.002-14.252,0.003-15.496,0.003-15.949v-2.28c0-3.625-1.434-7.037-4.035-9.607C75.168,33.297,71.79,31.898,68.227,31.898z"/>
+    </svg>
+    <div class="background"></div>
+    <div class="waves"></div>
+    <div class="content">
+      <svg class="wordmark" viewBox="0 0 617 148" version="1.1">
+        <path d="M42.3410389,61.0725585 L61.8530385,61.0725585 L61.8530385,83.9015979 L42.3410389,83.9015979 L42.3410389,145.169276 L17.5607996,145.169276 L17.5607996,83.9015979 L0,83.9015979 L0,61.0725585 L17.5607996,61.0725585 L17.5607996,29.8533593 L42.3410389,29.8533593 L42.3410389,61.0725585 Z M103.023357,0 L103.023357,66.3407983 C110.242797,61.4627985 118.828077,58.5359985 128.193837,58.5359985 C152.778956,58.5359985 172.681196,78.633358 172.681196,103.218477 L172.681196,145.169276 L146.925356,145.169276 L146.925356,103.218477 C146.925356,97.1697576 144.583916,91.5112777 140.486396,87.0235178 C136.388877,82.7308779 130.925517,80.389438 125.071917,80.389438 C119.218317,80.389438 113.559837,82.7308779 109.462317,87.0235178 C105.364797,91.5112777 103.023357,97.1697576 103.023357,103.218477 L103.023357,145.169276 L77.0723981,145.169276 L77.0723981,0 L103.023357,0 Z M229.070874,147.510716 C204.485755,147.510716 184.388395,127.413357 184.388395,102.828237 C184.388395,78.047998 204.485755,58.1457585 229.070874,58.1457585 C253.655994,58.1457585 273.753353,78.047998 273.753353,102.828237 C273.753353,105.559917 273.558233,108.096477 272.972873,110.828157 L210.144235,110.828157 C211.314955,113.950077 212.875915,116.681757 215.022235,119.023197 C218.88261,123.251227 223.784899,125.574185 229.070874,125.828907 L229.070874,147.510716 Z M209.753995,95.9990376 L250.143834,95.9990376 C249.168234,92.4868777 247.412154,89.1698378 244.875594,86.4381578 C240.973194,82.1455179 235.509834,79.804078 230.046474,79.804078 C224.387994,79.804078 219.119755,82.1455179 215.022235,86.4381578 C212.680795,89.1698378 210.924715,92.4868777 209.753995,95.9990376 Z M329.877599,59 C352.809406,59 373.974718,78.9022395 373.974718,103.682479 L373.974718,145.438158 L350.170078,145.438158 L350.170078,103.682479 C350.170078,91.5850392 341.584799,80.8534395 329.877599,80.8534395 C318.170399,80.8534395 309.585119,91.5850392 309.585119,103.682479 L309.585119,145.438158 L285,145.438158 L285,103.682479 C285,79.1692764 306.945792,59 329.877599,59 Z M448.190629,119.608557 L466.531908,131.901117 C458.531989,141.461996 446.239429,147.510716 432.776149,147.510716 C408.19103,147.510716 388.09367,127.413357 388.09367,102.828237 C388.09367,78.047998 408.19103,58.1457585 432.776149,58.1457585 C457.361269,58.1457585 477.458628,78.047998 477.458628,102.828237 C477.458628,105.559917 477.263508,108.096477 476.678148,110.828157 L413.84951,110.828157 C415.02023,113.950077 416.58119,116.681757 418.72751,119.023197 C422.825029,123.510957 428.093269,125.852397 433.751749,125.852397 C439.019989,125.852397 444.288229,123.510957 448.190629,119.608557 Z M413.45927,95.9990376 L453.849109,95.9990376 C452.873509,92.4868777 451.117429,89.1698378 448.580869,86.4381578 C444.678469,82.1455179 439.215109,79.804078 433.751749,79.804078 C428.093269,79.804078 422.825029,82.1455179 418.72751,86.4381578 C416.38607,89.1698378 414.62999,92.4868777 413.45927,95.9990376 Z M592.798865,61.0725585 L616.993744,61.0725585 L573.286865,145.169276 L569.969826,145.169276 L550.067586,107.315997 L530.360467,145.169276 L527.238547,145.169276 L483.141428,61.0725585 L507.336307,61.0725585 L528.799507,101.852637 L537.970146,84.2918379 L525.872707,61.0725585 L550.067586,61.0725585 L571.530786,101.852637 L592.798865,61.0725585 Z" id="thenew-copy-2" fill="#08171A"></path>
+      </svg>
+      <p class="text">I developed e-commerce websites for numerous clients during 7 years and Iʼm currently working to bring an industry-leading design system to adidas.</p>
+      <div class="links">
+        <a class="link" target="_blank" href="http://iam.thenew.fr">i am</a>
+        <a class="link" target="_blank" href="http://madeby.thenew.fr">i made</a>
+      </div>
     </div>
-    <script>
-        window.addEventListener('load', (e) => {
-            document.body.classList.add('js-load')
-        })
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164644-9"></script>
-    <script>
+  </div>
+  <script>
+    window.addEventListener('load', (e) => {
+      document.body.classList.add('js-load')
+    })
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164644-9"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-164644-9');
-    </script>
+  </script>
 </body>
 </html>
