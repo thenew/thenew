@@ -19,3 +19,4 @@ sitemap.xml.gz
 /demos/
 /bkp/
 wp-content/themes/thenew2013/assets/public/min.css
+node_modules/
